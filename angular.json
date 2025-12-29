@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "aaa9bca0-0eff-45f5-aaf0-989e0ee278f4"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -24,60 +25,58 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+          "styles": [
+            "src/styles.scss"
+          ],
+          "server": "src/main.server.ts",
+          "outputMode": "server",
+          "ssr": {
+            "entry": "src/server.ts"
+          }
+        },
+        "configurations": {
+          "production": {
+            "budgets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "type": "initial",
+                "maximumWarning": "500kB",
+                "maximumError": "1MB"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "4kB",
+                "maximumError": "8kB"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "outputHashing": "all"
           },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
+          "development": {
+            "optimization": false,
+            "extractLicenses": false,
+            "sourceMap": true
+          }
         },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "portfolio:build:production"
-            },
-            "development": {
-              "buildTarget": "portfolio:build:development"
-            }
+        "defaultConfiguration": "production"
+      },
+      "serve": {
+        "builder": "@angular/build:dev-server",
+        "configurations": {
+          "production": {
+            "buildTarget": "portfolio:build:production"
           },
-          "defaultConfiguration": "development"
+          "development": {
+            "buildTarget": "portfolio:build:development"
+          }
         },
-        "test": {
-          "builder": "@angular/build:unit-test"
-        }
+        "defaultConfiguration": "development"
+      },
+      "test": {
+        "builder": "@angular/build:unit-test"
       }
     }
   }
+}
 }

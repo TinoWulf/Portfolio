@@ -1,0 +1,25 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+div {
+    display: flex;
+    gap: 24px;
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+
+    p {
+        font-family: 'Karla';
+        font-weight: 300;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #FFFFFFCC;
+    }
+}
