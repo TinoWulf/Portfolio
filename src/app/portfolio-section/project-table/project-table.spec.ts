@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { References } from './references';
+import { ProjectTable } from './project-table';
 
-describe('References', () => {
-  let component: References;
-  let fixture: ComponentFixture<References>;
+describe('ProjectTable', () => {
+  let component: ProjectTable;
+  let fixture: ComponentFixture<ProjectTable>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [References]
+      imports: [ProjectTable]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(References);
+    fixture = TestBed.createComponent(ProjectTable);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
