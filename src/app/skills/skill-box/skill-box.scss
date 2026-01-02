@@ -1,0 +1,101 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 503px;
+    gap: 40px;
+    border-radius: 30px;
+    border-width: 1px;
+    padding: 32px;
+    background: #3DCFB61A;
+    border: 1px solid #3DCFB6;
+
+    p {
+        font-family: 'FiraCode';
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 64px;
+        line-height: 100%;
+        letter-spacing: -3%;
+        color: #3DCFB6;
+    }
+
+    .text-block {
+        display: flex;
+        width: 456px;
+        height: 247px;
+        gap: 32px;
+        flex-direction: column;
+
+        p {
+            font-family: 'Karla';
+            font-weight: 300;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: justify;
+            color: #FFFFFF;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 330px;
+
+            div {
+                display: flex;
+                gap: 10px;
+
+                p {
+                    font-family: 'FiraCode';
+                    font-weight: 700;
+                    font-style: Bold;
+                    font-size: 24px;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+                }
+            }
+
+            p {
+                font-family: 'Karla';
+                font-weight: 300;
+                font-style: Regular;
+                font-size: 16px;
+                line-height: 120%;
+                letter-spacing: 0%;
+            }
+        }
+    }
+
+    button {
+        width: 122px;
+        height: 48px;
+        border-radius: 100px;
+        border-width: 1px;
+        padding-right: 24px;
+        padding-left: 24px;
+        border: 1px solid #FFFFFF;
+        background-color: transparent;
+
+        p {
+            font-family: 'Karla';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+            white-space: nowrap;
+        }
+    }
+}
+
+.white {
+    color: #FFFFFF !important;
+}
+
+.turquoise {
+    color: #3DCFB6 !important;
+}
