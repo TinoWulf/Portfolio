@@ -1,0 +1,169 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 616px;
+    gap: 40px;
+    border-top-width: 1px;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom-width: 1px;
+            padding: 32px;
+
+            p {
+                font-family: 'FiraCode';
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 24px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                color: #3DCFB6;
+            }
+
+            input {
+                font-family: 'Karla';
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 18px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                background: transparent;
+                border: none;
+                color: #FFFFFF;
+
+                &:focus {
+                    outline: none;
+                    outline-offset: 6px;
+                }
+            }
+        }
+    }
+
+    .send-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        .privacy-policy {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .check-box-div {
+                display: flex;
+                gap: 8px;
+
+                .checkbox {
+                    position: relative;
+                    display: inline-flex;
+                    cursor: pointer;
+                }
+
+                .checkbox input {
+                    display: none;
+                }
+
+                .checkbox .box {
+                    width: 18px;
+                    height: 18px;
+                    border: 2px solid #3DCFB6;
+                    background: transparent;
+                    position: relative;
+                    z-index: 2;
+                    border-radius: 3px;
+                }
+
+                .checkbox .box::before {
+                    content: "";
+                    position: absolute;
+                    inset: -8px;
+                    border-radius: 50%;
+                    background: rgba(61, 207, 182, 0.3);
+                    opacity: 0;
+                    transition: opacity 0.25s ease;
+                    z-index: -1;
+                }
+
+                .checkbox:hover .box::before {
+                    opacity: 1;
+                }
+
+                .checkbox input:checked+.box::after {
+                    content: "";
+                    position: absolute;
+                    left: 3px;
+                    top: -1px;
+                    width: 6px;
+                    height: 10px;
+                    border: solid #3DCFB6;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(40deg);
+                }
+
+
+                p {
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 15px;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+                    color: #FFFFFF;
+                }
+
+                .privacy-policy-link {
+                    color: #3DCFB6;
+                    
+                    &:hover {
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .report {
+                font-family: 'Karla';
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 14px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                color: #E61C40;
+
+            }
+        }
+
+        button {
+            width: 139px;
+            height: 48px;
+            border-radius: 100px;
+            border-width: 1px;
+            padding-right: 24px;
+            padding-left: 24px;
+            background: transparent;
+            border: 1px solid #FFFFFF80;
+
+            p {
+                font-family: 'Karla';
+                font-weight: 300;
+                font-style: Regular;
+                font-size: 18px;
+                line-height: 120%;
+                letter-spacing: 0%;
+                color: #FFFFFFCC;
+            }
+        }
+
+    }
+}
+
+.border-design {
+    border-top: 1px solid #3DCFB6;
+    border-bottom: 1px solid #3DCFB6;
+}

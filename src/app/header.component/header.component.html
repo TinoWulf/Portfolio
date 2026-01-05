@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="header-inner">
+        <div class="menu">
+            <div class="language-switch" (click)="toggleLanguage()">
+                <div class="lang-option" [class.active]="currentLang === 'en'">
+                    EN
+                </div>
+                <div class="lang-option" [class.active]="currentLang === 'de'">
+                    DE
+                </div>
+            </div>
+            <div class="nav-links">
+                <a class="hover-underline" href="#about">{{ translation.translate('HEADER.ABOUTME') }}</a>
+                <a class="hover-underline" href="#skill">{{ translation.translate('HEADER.SKILLS') }}</a>
+                <a class="hover-underline" href="#projects">{{ translation.translate('HEADER.PROJECTS') }}</a>
+            </div>
+        </div>
+        <div class="logo">
+            Wulft
+        </div>
+    </div>
+</div>

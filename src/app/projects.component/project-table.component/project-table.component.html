@@ -1,0 +1,49 @@
+<div class="body">
+    <div class="projects-wrapper">
+        <div class="projects-table border-style">
+            <div class="single-project" (mouseenter)="activeProject = 1" (mouseleave)="activeProject = 0">
+                <p class="headline">Join</p>
+                <div>
+                    <p>JavaScript</p>
+                    <p class="spliter">|</p>
+                    <p>HTML</p>
+                    <p class="spliter">|</p>
+                    <p>CSS</p>
+                    <p class="spliter">|</p>
+                    <p>Firebase</p>
+                </div>
+            </div>
+
+            <div class="single-project border-style" (mouseenter)="activeProject = 2" (mouseleave)="activeProject = 0">
+                <p class="headline">Sharkie</p>
+                <div>
+                    <p>JavaScript</p>
+                    <p class="spliter">|</p>
+                    <p>HTML</p>
+                    <p class="spliter">|</p>
+                    <p>CSS</p>
+                </div>
+            </div>
+
+            <div class="single-project" (mouseenter)="activeProject = 3" (mouseleave)="activeProject = 0">
+                <p class="headline">Pokedex</p>
+                <div>
+                    <p>JavaScript</p>
+                    <p class="spliter">|</p>
+                    <p>HTML</p>
+                    <p class="spliter">|</p>
+                    <p>CSS</p>
+                    <p class="spliter">|</p>
+                    <p>REST-API</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-preview">
+            <img src="/assets/img/screenshots/join-portfolio.png" [class.visible]="activeProject === 1">
+            <img src="/assets/img/screenshots/sharkie-portfolio.png" [class.visible]="activeProject === 2">
+            <img src="/assets/img/screenshots/pokedex-portfolio.png" [class.visible]="activeProject === 3">
+        </div>
+
+    </div>
+</div>

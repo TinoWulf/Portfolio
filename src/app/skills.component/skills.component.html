@@ -1,0 +1,21 @@
+<div id="skill" class="body">
+  <div class="skill-set">
+    <p>Technologies</p>
+    <app-skill-box></app-skill-box>
+  </div>
+
+  <div class="skill-icons">
+    <div *ngFor="let skill of skills">
+      <img
+        [id]="skill.src" 
+        [src]="'/assets/img/skill-icons/' + skill.src + '.png'"
+        [alt]="skill.name"
+      />
+      <p>{{ skill.name }}</p>
+    </div>
+    <div>
+      <img id="mindset" src="/assets/img/skill-icons/mindset.png" alt="">
+      <p id="mindset-text">Growth Mindset</p>
+    </div>
+  </div>
+</div>
