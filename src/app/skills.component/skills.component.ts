@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { SkillBox } from './skill-box.component/skill-box.component';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.services';
+
 
 @Component({
   selector: 'app-skills',
@@ -10,6 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.component.scss',
 })
 export class Skills {
+    constructor(public translation: TranslationService) {}
+  
   skills = [
     { name: 'HTML', src: 'html' },
     { name: 'CSS', src: 'css' },

@@ -9,8 +9,7 @@ import { TranslationService } from '../services/translation.services';
   styleUrls: ['./projects.component.scss']
 })
 export class Projects {
-  constructor(public translation: TranslationService) {
-    
-  }
+  constructor(public translation: TranslationService) {}
   activeProject = 0;
+
 }

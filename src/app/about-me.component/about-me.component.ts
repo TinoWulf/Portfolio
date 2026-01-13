@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ShortProfile } from './short-profile.component/short-profile.component';
+import { TranslationService } from '../services/translation.services';
+
 
 @Component({
   selector: 'app-about-me',
@@ -8,5 +10,5 @@ import { ShortProfile } from './short-profile.component/short-profile.component'
   styleUrl: './about-me.component.scss',
 })
 export class AboutMe {
-
+  constructor(public translation: TranslationService) {}
 }

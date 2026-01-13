@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ContactSheet } from './contact-sheet.component/contact-sheet.component';
+import { TranslationService } from '../services/translation.services';
+
 
 @Component({
   selector: 'app-contact-me',
@@ -8,5 +10,5 @@ import { ContactSheet } from './contact-sheet.component/contact-sheet.component'
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMe {
-
+  constructor(public translation: TranslationService) {}
 }

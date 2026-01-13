@@ -1,49 +1,49 @@
 <div class="body">
-    <div class="projects-wrapper">
-        <div class="projects-table border-style">
-            <div class="single-project" (mouseenter)="activeProject = 1" (mouseleave)="activeProject = 0">
-                <p class="headline">Join</p>
-                <div>
-                    <p>JavaScript</p>
-                    <p class="spliter">|</p>
-                    <p>HTML</p>
-                    <p class="spliter">|</p>
-                    <p>CSS</p>
-                    <p class="spliter">|</p>
-                    <p>Firebase</p>
-                </div>
-            </div>
+  <div class="projects-wrapper">
 
-            <div class="single-project border-style" (mouseenter)="activeProject = 2" (mouseleave)="activeProject = 0">
-                <p class="headline">Sharkie</p>
-                <div>
-                    <p>JavaScript</p>
-                    <p class="spliter">|</p>
-                    <p>HTML</p>
-                    <p class="spliter">|</p>
-                    <p>CSS</p>
-                </div>
-            </div>
+    <div class="projects-table border-style">
+      <div class="single-project" *ngFor="let project of projects; let i = index" (click)="openOverlay(i)"
+        (mouseenter)="activeProject = project.id" (mouseleave)="activeProject = null"
+        [ngClass]="{ 'border-style': i === middleIndex }">
+        <p class="headline">{{ project.title }}</p>
 
-            <div class="single-project" (mouseenter)="activeProject = 3" (mouseleave)="activeProject = 0">
-                <p class="headline">Pokedex</p>
-                <div>
-                    <p>JavaScript</p>
-                    <p class="spliter">|</p>
-                    <p>HTML</p>
-                    <p class="spliter">|</p>
-                    <p>CSS</p>
-                    <p class="spliter">|</p>
-                    <p>REST-API</p>
-                </div>
-            </div>
+        <div>
+          <ng-container *ngFor="let tech of project.techs; let last = last">
+            <p>{{ tech }}</p>
+            <p class="spliter" *ngIf="!last">|</p>
+          </ng-container>
         </div>
-
-        <div class="project-preview">
-            <img src="/assets/img/screenshots/join-portfolio.png" [class.visible]="activeProject === 1">
-            <img src="/assets/img/screenshots/sharkie-portfolio.png" [class.visible]="activeProject === 2">
-            <img src="/assets/img/screenshots/pokedex-portfolio.png" [class.visible]="activeProject === 3">
-        </div>
-
+      </div>
     </div>
+
+    <div class="project-preview">
+      <img *ngFor="let project of projects" [src]="project.image" [class.visible]="activeProject === project.id" />
+    </div>
+
+  </div>
+</div>
+
+<div class="overlay" *ngIf="isOverlayOpen && selectedIndex !== null">
+  <div class="overlay-content">
+    <p>{{ projects[selectedIndex].title }}</p>
+    <img class="close-btn" (click)="closeOverlay()" src="/assets/img/close_small.png" alt="">
+    <div class="overlay-text">
+      <div class="text-headline">
+        <p class="headline-number">01</p>
+        <p class="headline-project">Join</p>
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+    <img class="shown-project" src="" alt="">
+    <div class="next-btn"  (click)="next()">
+      <p>next project</p>
+      <img src="/assets/img/arrow_forward.png" alt="">
+    </div>
+    <!-- <button (click)="prev()">zurück</button> -->
+  </div>
 </div>
