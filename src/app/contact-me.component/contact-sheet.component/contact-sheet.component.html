@@ -17,16 +17,18 @@
         <div class="privacy-policy">
             <div class="check-box-div">
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" (change)="onCheckboxChange($event)">
                     <span class="box"></span>
                 </label>
                 <p>{{ translation.translate('CONTACTME.POLICY1') }}</p>
                 <p class="privacy-policy-link hover-underline">{{ translation.translate('CONTACTME.POLICY2') }}</p>
                 <p>{{ translation.translate('CONTACTME.POLICY3') }}</p>
             </div>
-            <p class="report">{{ translation.translate('CONTACTME.ALLERT') }}</p>
+            <p class="report" [class.active]="triedSubmit && !isChecked">
+                {{ translation.translate('CONTACTME.ALLERT') }}
+            </p>
         </div>
-        <button class="button-hover-effect">
+        <button class="button-hover-effect" [class.inactive]="!isChecked" (click)="onSubmitClick()">
             <p>{{ translation.translate('CONTACTME.BTN') }}</p>
         </button>
     </div>

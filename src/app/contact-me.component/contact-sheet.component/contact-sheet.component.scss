@@ -120,7 +120,7 @@
 
                 .privacy-policy-link {
                     color: #3DCFB6;
-                    
+
                     &:hover {
                         color: #FFFFFF;
                     }
@@ -135,8 +135,18 @@
                 line-height: 120%;
                 letter-spacing: 0%;
                 color: #E61C40;
-
+                visibility: hidden;
+                height: 14px;
+                margin: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;
             }
+
+            .report.active {
+                visibility: visible;
+                opacity: 1;
+            }
+
         }
 
         button {
@@ -147,7 +157,14 @@
             padding-right: 24px;
             padding-left: 24px;
             background: transparent;
-            border: 1px solid #FFFFFF80;
+            border: 1px solid #3DCFB6;
+            transition: all 0.3s ease;
+
+            &.inactive {
+                border: 1px solid #ffffff80;
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
 
             p {
                 font-family: 'Karla';
