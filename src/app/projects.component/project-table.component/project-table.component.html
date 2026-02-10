@@ -9,7 +9,7 @@
 
         <div>
           <ng-container *ngFor="let tech of project.techs; let last = last">
-            <p>{{ tech }}</p>
+            <p>{{ tech.name }}</p>
             <p class="spliter" *ngIf="!last">|</p>
           </ng-container>
         </div>
@@ -25,23 +25,36 @@
 
 <div class="overlay" *ngIf="isOverlayOpen && selectedIndex !== null">
   <div class="overlay-content">
-    <p>{{ projects[selectedIndex].title }}</p>
     <img class="close-btn" (click)="closeOverlay()" src="/assets/img/close_small.png" alt="">
     <div class="overlay-text">
       <div class="text-headline">
-        <p class="headline-number">01</p>
-        <p class="headline-project">Join</p>
+        <p class="headline-number">0{{ projects[selectedIndex].id }}</p>
+        <p class="headline-project">{{ projects[selectedIndex].title }}</p>
       </div>
-      <div>
-
+      <div class="text-description">
+        <div class="description">
+          <p class="description-headline">What is this project about?</p>
+          <p class="description-text">{{ projects[selectedIndex].description }}</p>
+        </div>
+        <div class="text-icons">
+          <div *ngFor="let tech of projects[selectedIndex].techs">
+            <img [src]="tech.icon" alt="">
+            <p>{{ tech.name }}</p>
+          </div>
+        </div>
       </div>
-      <div>
-
+      <div class="text-btns">
+        <button class="button-hover-effect">
+          <p>GutHub</p><img src="/assets/img/arrow_outward.png" alt="">
+        </button>
+        <button class="button-hover-effect">
+          <p>LiveTest</p><img src="/assets/img/arrow_outward.png" alt="">
+        </button>
       </div>
     </div>
-    <img class="shown-project" src="" alt="">
-    <div class="next-btn"  (click)="next()">
-      <p>next project</p>
+    <img class="shown-project" [src]="projects[selectedIndex].image" alt="">
+    <div class="next-btn" (click)="next()">
+      <p>Next project</p>
       <img src="/assets/img/arrow_forward.png" alt="">
     </div>
     <!-- <button (click)="prev()">zurück</button> -->
