@@ -68,7 +68,34 @@ export class TranslationService {
                 ALLERT: 'Bitte akzeptiere die Datenschutzerklärung.',
                 BTN: 'Sag Hallo!'
             }
-
+            ,
+            POLICY: {
+                TITLE: 'Datenschutzerklärung',
+                INTRO: 'Diese Datenschutzerklärung erklärt, wie ich personenbezogene Daten sammle und verwende.',
+                LAST_UPDATED: 'Zuletzt aktualisiert:',
+                SECTIONS: {
+                    COLLECTION: {
+                        TITLE: 'Welche Daten werden gesammelt?',
+                        CONTENT: 'Kontaktinformationen, freiwillige Angaben aus Formularen und technische Metadaten.'
+                    },
+                    USAGE: {
+                        TITLE: 'Wofür werden Daten verwendet?',
+                        CONTENT: 'Antworten auf Anfragen, Verbesserung der Website und rechtliche Zwecke.'
+                    },
+                    COOKIES: {
+                        TITLE: 'Cookies',
+                        CONTENT: 'Die Seite verwendet Cookies zur Verbesserung der Nutzererfahrung.'
+                    },
+                    RIGHTS: {
+                        TITLE: 'Ihre Rechte',
+                        CONTENT: 'Sie können Zugang, Berichtigung oder Löschung Ihrer Daten verlangen.'
+                    }
+                },
+                CONTACT: 'Bei Fragen zur Datenschutzerklärung kontaktieren Sie mich bitte unter:',
+                BACK_BTN: 'Zurück',
+                ACCEPT_BTN: 'Akzeptieren',
+                DECLINE_BTN: 'Ablehnen'
+            }
         },
         en: {
             HEADER: {
@@ -128,6 +155,49 @@ export class TranslationService {
                 POLICY3: 'and agree to the processing of my data as outlined.',
                 ALLERT: 'Please accept the privacy policy.',
                 BTN: 'Say Hello!'
+            }
+            ,
+            POLICY: {
+                TITLE: 'Legal Notice',
+                SECTIONS: {
+                    IMPRINT: {
+                        TITLE: 'Imprint',
+                        CONTENT1: 'Tino Willy Wulf',
+                        CONTENT2: 'Wiggersstraße 9',
+                        CONTENT3: '18057 Rostock',
+                        CONTENT4: 'Germany'
+                    },
+                    EXPLORING: {
+                        TITLE: 'Exploring the Board',
+                        CONTENT: 'wulf.tino.gz@gmail.com'
+                    },
+                    ACCEPTANCE: {
+                        TITLE: 'Acceptance of terms',
+                        CONTENT: 'By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.'
+                    },
+                    SCOPE: {
+                        TITLE: 'Scope and ownership of the product',
+                        CONTENT: 'Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.'
+                    },
+                    PROPRIETARY: {
+                        TITLE: 'Proprietary rights',
+                        CONTENT: 'Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.'
+                    },
+                    USE: {
+                        TITLE: 'Use of the product',
+                        CONTENT: 'Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.'
+                    },
+                    DISCLAIMER: {
+                        TITLE: 'Disclaimer of warranties and limitation of liability',
+                        CONTENT: 'Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.'
+                    },
+                    INDEMNITY: {
+                        TITLE: 'Indemnity',
+                        CONTENT: 'You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.'
+                    },
+                },
+                CONTACT: 'For any questions or notices, please contact us at wulf.tino.gz@gmail.com',
+                DATE: 'Date: 11.02.2026'
             }
         }
     };

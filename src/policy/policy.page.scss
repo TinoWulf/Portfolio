@@ -1,0 +1,76 @@
+.policy-container {
+    padding: 200px 120px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    h1 {
+        font-family: 'FiraCode';
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 64px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #3DCFB6;
+        padding-bottom: 50px;
+    }
+
+    .policy-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        h2 {
+            font-family: 'Karla';
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 19px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            margin: 0;
+            margin-bottom: 5px;
+            color: var(--version-2-white, #FFFFFF);
+        }
+
+        p {
+            text-align: justify;
+            font-family: 'Karla';
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            color: #3DCFB6;
+        }
+
+        .date {
+            padding-top: 20px;
+        }
+    }
+
+    .policy-actions {
+        margin-top: 2rem;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            font-family: 'Karla';
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 19px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            margin: 0;
+            margin-bottom: 5px;
+            color: var(--version-2-white, #FFFFFF);
+
+            &:hover {
+                color: #3DCFB6;
+            }
+        }
+    }
+}

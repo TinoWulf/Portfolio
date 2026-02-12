@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     width: 616px;
-    gap: 40px;
     border-top-width: 1px;
 
     .form {
         display: flex;
         flex-direction: column;
 
-        div {
+        >.border-design,
+        >div:not(.send-btn) {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -43,140 +43,148 @@
                 }
             }
         }
-    }
 
-    .send-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-
-        .privacy-policy {
+        .send-btn {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            align-items: center;
+            gap: 16px;
+            padding-top: 40px;
 
-            .check-box-div {
+            .privacy-policy {
                 display: flex;
+                flex-direction: column;
                 gap: 8px;
 
-                .checkbox {
-                    position: relative;
-                    display: inline-flex;
-                    cursor: pointer;
+                .check-box-div {
+                    display: flex;
+                    gap: 8px;
+
+                    .checkbox {
+                        position: relative;
+                        display: inline-flex;
+                        cursor: pointer;
+                    }
+
+                    .checkbox input {
+                        display: none;
+                    }
+
+                    .checkbox .box {
+                        width: 18px;
+                        height: 18px;
+                        border: 2px solid #3DCFB6;
+                        background: transparent;
+                        position: relative;
+                        z-index: 2;
+                        border-radius: 3px;
+                    }
+
+                    .checkbox .box::before {
+                        content: "";
+                        position: absolute;
+                        inset: -8px;
+                        border-radius: 50%;
+                        background: rgba(61, 207, 182, 0.3);
+                        opacity: 0;
+                        transition: opacity 0.25s ease;
+                        z-index: -1;
+                    }
+
+                    .checkbox:hover .box::before {
+                        opacity: 1;
+                    }
+
+                    .checkbox input:checked+.box::after {
+                        content: "";
+                        position: absolute;
+                        left: 3px;
+                        top: -1px;
+                        width: 6px;
+                        height: 10px;
+                        border: solid #3DCFB6;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(40deg);
+                    }
+
+
+                    p {
+                        font-family: 'Karla';
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 15px;
+                        line-height: 120%;
+                        letter-spacing: 0%;
+                        color: #FFFFFF;
+                    }
+
+                    .privacy-policy-link {
+                        color: #3DCFB6;
+                        font-family: 'Karla';
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 15px;
+                        line-height: 120%;
+                        letter-spacing: 0%;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #FFFFFF;
+                        }
+                    }
                 }
 
-                .checkbox input {
-                    display: none;
-                }
-
-                .checkbox .box {
-                    width: 18px;
-                    height: 18px;
-                    border: 2px solid #3DCFB6;
-                    background: transparent;
-                    position: relative;
-                    z-index: 2;
-                    border-radius: 3px;
-                }
-
-                .checkbox .box::before {
-                    content: "";
-                    position: absolute;
-                    inset: -8px;
-                    border-radius: 50%;
-                    background: rgba(61, 207, 182, 0.3);
-                    opacity: 0;
-                    transition: opacity 0.25s ease;
-                    z-index: -1;
-                }
-
-                .checkbox:hover .box::before {
-                    opacity: 1;
-                }
-
-                .checkbox input:checked+.box::after {
-                    content: "";
-                    position: absolute;
-                    left: 3px;
-                    top: -1px;
-                    width: 6px;
-                    height: 10px;
-                    border: solid #3DCFB6;
-                    border-width: 0 2px 2px 0;
-                    transform: rotate(40deg);
-                }
-
-
-                p {
+                .report {
                     font-family: 'Karla';
                     font-weight: 400;
                     font-style: Regular;
-                    font-size: 15px;
+                    font-size: 14px;
                     line-height: 120%;
                     letter-spacing: 0%;
-                    color: #FFFFFF;
+                    color: #E61C40;
+                    visibility: hidden;
+                    height: 14px;
+                    margin: 0;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
                 }
 
-                .privacy-policy-link {
-                    color: #3DCFB6;
-
-                    &:hover {
-                        color: #FFFFFF;
-                    }
+                .report.active {
+                    visibility: visible;
+                    opacity: 1;
                 }
+
             }
 
-            .report {
-                font-family: 'Karla';
-                font-weight: 400;
-                font-style: Regular;
-                font-size: 14px;
-                line-height: 120%;
-                letter-spacing: 0%;
-                color: #E61C40;
-                visibility: hidden;
-                height: 14px;
-                margin: 0;
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
+            button {
+                width: 139px;
+                height: 48px;
+                border-radius: 100px;
+                border-width: 1px;
+                padding-right: 24px;
+                padding-left: 24px;
+                background: transparent;
+                border: 1px solid #3DCFB6;
+                transition: all 0.3s ease;
 
-            .report.active {
-                visibility: visible;
-                opacity: 1;
+                &.inactive {
+                    border: 1px solid #ffffff80;
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+
+                p {
+                    font-family: 'Karla';
+                    font-weight: 300;
+                    font-style: Regular;
+                    font-size: 18px;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+                    color: #FFFFFFCC;
+                }
             }
 
         }
-
-        button {
-            width: 139px;
-            height: 48px;
-            border-radius: 100px;
-            border-width: 1px;
-            padding-right: 24px;
-            padding-left: 24px;
-            background: transparent;
-            border: 1px solid #3DCFB6;
-            transition: all 0.3s ease;
-
-            &.inactive {
-                border: 1px solid #ffffff80;
-                opacity: 0.4;
-                cursor: not-allowed;
-            }
-
-            p {
-                font-family: 'Karla';
-                font-weight: 300;
-                font-style: Regular;
-                font-size: 18px;
-                line-height: 120%;
-                letter-spacing: 0%;
-                color: #FFFFFFCC;
-            }
-        }
-
     }
 }
 

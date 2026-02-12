@@ -1,35 +1,66 @@
 <div class="body">
-    <div class="form">
-        <div class="border-design">
+    <form class="form" #contactForm="ngForm" novalidate (ngSubmit)="onSubmitClick(contactForm)">
+
+        <div class="border-design" 
+            [class.invalid]="name.invalid && (name.touched || triedSubmit)">
             <p>{{ translation.translate('CONTACTME.NAME') }}</p>
-            <input type="text" placeholder="{{ translation.translate('CONTACTME.NAMEPLACEHOLDER') }}">
+            <input
+            [(ngModel)]="contactData.name"
+            name="name"
+            #name="ngModel"
+            required
+            type="text"
+            placeholder="{{ translation.translate('CONTACTME.NAMEPLACEHOLDER') }}">
         </div>
-        <div>
+
+        <div
+            [class.invalid]="email.invalid && (email.touched || triedSubmit)">
             <p>{{ translation.translate('CONTACTME.EMAIL') }}</p>
-            <input type="text" placeholder="{{ translation.translate('CONTACTME.EMAILPLACEHOLDER') }}">
+            <input
+            [(ngModel)]="contactData.email"
+            name="email"
+            #email="ngModel"
+            required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            email
+            type="email"
+            placeholder="{{ translation.translate('CONTACTME.EMAILPLACEHOLDER') }}">
         </div>
-        <div class="border-design">
+
+        <div class="border-design" 
+            [class.invalid]="message.invalid && (message.touched || triedSubmit)">
             <p>{{ translation.translate('CONTACTME.HELP') }}</p>
-            <input type="text" placeholder="{{ translation.translate('CONTACTME.HELPPLACEHOLDER') }}">
+            <input
+            [(ngModel)]="contactData.message"
+            name="message"
+            #message="ngModel"
+            required
+            type="text"
+            placeholder="{{ translation.translate('CONTACTME.HELPPLACEHOLDER') }}">
         </div>
-    </div>
-    <div class="send-btn">
-        <div class="privacy-policy">
-            <div class="check-box-div">
-                <label class="checkbox">
-                    <input type="checkbox" (change)="onCheckboxChange($event)">
-                    <span class="box"></span>
-                </label>
-                <p>{{ translation.translate('CONTACTME.POLICY1') }}</p>
-                <p class="privacy-policy-link hover-underline">{{ translation.translate('CONTACTME.POLICY2') }}</p>
-                <p>{{ translation.translate('CONTACTME.POLICY3') }}</p>
+
+        <div class="send-btn">
+            <div class="privacy-policy">
+                <div class="check-box-div">
+                    <label class="checkbox">
+                        <input type="checkbox" (change)="onCheckboxChange($event)">
+                        <span class="box"></span>
+                    </label>
+                    <p>{{ translation.translate('CONTACTME.POLICY1') }}</p>
+                    <a class="privacy-policy-link hover-underline" routerLink="/policy">{{ translation.translate('CONTACTME.POLICY2') }}</a>
+                    <p>{{ translation.translate('CONTACTME.POLICY3') }}</p>
+                </div>
+                <p class="report" [class.active]="triedSubmit && !isChecked">
+                    {{ translation.translate('CONTACTME.ALLERT') }}
+                </p>
             </div>
-            <p class="report" [class.active]="triedSubmit && !isChecked">
-                {{ translation.translate('CONTACTME.ALLERT') }}
-            </p>
-        </div>
-        <button class="button-hover-effect" [class.inactive]="!isChecked" (click)="onSubmitClick()">
-            <p>{{ translation.translate('CONTACTME.BTN') }}</p>
-        </button>
+            <button 
+                type="submit"
+                class="button-hover-effect"
+                [class.inactive]="!isChecked || contactForm.invalid">
+                <p>{{ translation.translate('CONTACTME.BTN') }}</p>
+            </button>
     </div>
+
+    </form>
+
 </div>
