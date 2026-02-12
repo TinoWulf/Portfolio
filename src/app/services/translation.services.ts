@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root'
 })
 export class TranslationService {
-    private languageSubject = new BehaviorSubject<'de' | 'en'>('de');
+    private languageSubject = new BehaviorSubject<'de' | 'en'>('en');
     language$ = this.languageSubject.asObservable();
 
     private translations = {
@@ -27,15 +27,15 @@ export class TranslationService {
             ABOUTME: {
                 WHOIAM: 'Wer ich bin',
                 ABOUTME: 'Über mich',
-                INTRODUCTION: 'Hallo meine name ist.. und so weiter, halt einfach irgendwas hier raus',
-                BASED: 'Wo befinden Sie sich? Wären Sie bereit, remote zu arbeiten oder gegebenenfalls umzuziehen??',
-                MINDSET: 'Zeigen Sie, dass Sie aufgeschlossen sind. Begeistert es Sie, neue Technologien zu erlernen und Ihre Fähigkeiten stetig zu verbessern?',
-                DESCRIPTION: 'Eine kurze Beschreibung Ihres Problemlösungsansatzes. Lernen Sie aus jeder Herausforderung, um die effizienteste oder eleganteste Lösung zu finden? Sie können Schlüsselwörter wie analytisches Denken, Kreativität, Beharrlichkeit und Zusammenarbeit einbeziehen.',
+                INTRODUCTION: 'Hallo, mein Name ist Tino Wulf. Ich bin ein motivierter, zuverlässiger IT-Enthusiast mit ausgeprägtem Verantwortungsbewusstsein und strukturierter Denkweise.',
+                BASED: 'Ich lebe derzeit in Rostock und bin offen für Remote-Arbeit, bevorzuge aber die Arbeit im Büro. Ich bin flexibel und kann mich an verschiedene Arbeitsmodelle anpassen.',
+                MINDSET: 'Ich suche aktiv nach neuen Herausforderungen und schätze Feedback als Chance zur beruflichen und persönlichen Weiterentwicklung.',
+                DESCRIPTION: 'Durch meine berufliche Laufbahn als Offizier und meine aktuelle Weiterbildung im Frontend-Bereich habe ich ein starkes Interesse an Technologie, Problemlösung und kontinuierlicher Selbstverbesserung entwickelt.',
             },
             SKILLS: {
                 TEC: 'Technologien',
                 HEADLINE: 'Fähigkeiten',
-                INTRODUCTION: 'Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung im Umgang mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es dir ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.',
+                INTRODUCTION: 'Ich entwickle mich kontinuierlich weiter und passe mich schnell an neue Technologien und Arbeitsabläufe an. Ich entwickle mit HTML, CSS und JavaScript und setze diese Kenntnisse in realen Projekten ein. Ergänzend nutze ich KI-Tools effizient für Entwicklung, Debugging und Optimierung und erstelle mit Angular strukturierte, dynamische Webanwendungen.',
                 QUESTION1: 'Du suchst',
                 QUESTION2: 'weitere Fähigkeiten?',
                 REQUEST: 'Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.',
@@ -43,13 +43,17 @@ export class TranslationService {
             },
             PROJECTS: {
                 HEADLINE: 'Ausgewählte Projekte',
-                INTRODUCTION: 'Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.'
+                INTRODUCTION: 'Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+                ABOUT: 'Worum geht es in diesem Projekt?',
+                DESCRIPTION1: 'Aufgabenmanager, inspiriert vom Kanban-System. Aufgaben können per Drag & Drop erstellt und organisiert und anschließend mit Benutzer und Kategorien zugewiesen werden.',
+                DESCRIPTION2: 'Einfaches Browserspiel in JavaScript. Die Spielfigur steuern, Hindernissen ausweichen, Items sammeln und Level abschließen. Fokus auf objektorientierter Programmierung und Strukturierung der Spiellogik mit Klassen. Benutzer und Kategorien zuweisen.',
+                DESCRIPTION3: 'Webbasierte Pokédex-Anwendung. Pokémon durchsuchen und suchen, Werte, Typen und Fähigkeiten in einer interaktiven Oberfläche anzeigen. Datenabruf von APIs und Verarbeitung asynchroner Anfragen.'
             },
             CONTACTME: {
                 CONTACTME: 'Kontakt',
                 HEADLINE: 'Lass uns zusammenarbeiten',
                 PROBLEM: 'Hast du ein Problem?',
-                WORTH: 'Ermutige Besucher, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige, welchen Mehrwert du mit deiner Arbeit für ihre Projekte schaffst.',
+                WORTH: 'Ich bin jederzeit offen für Gespräche über Ideen, Anforderungen und mögliche Lösungen und erläutere Ihnen gerne meine Kompetenzen im Detail. Mit strukturierter Arbeitsweise, Zuverlässigkeit und einem ausgeprägten Verantwortungsbewusstsein möchte ich Ihre Projekte mit praxisorientierten und durchdachten Lösungen unterstützen und einen echten Mehrwert für Ihre Anwendungen schaffen.',
                 Question1: 'Suchst du einen Frontend-Entwickler?',
                 Question2: 'Lass uns sprechen!',
                 NAME: 'Wie heißt du?',
@@ -77,22 +81,22 @@ export class TranslationService {
                 CONTACTBTN: 'Contact me',
             },
             BANNER: {
-                LOCATION: 'Based in Rostcok',
-                AVAILABILITY: 'Avalable for remote and office work',
+                LOCATION: 'Based in Rostock',
+                AVAILABILITY: 'Available for remote and office work',
                 WORK: 'Open to work'
             },
             ABOUTME: {
                 WHOIAM: 'Who I Am',
                 ABOUTME: 'About me',
-                INTRODUCTION: 'Hello, my name is... and so on, just write something here.',
-                BASED: 'Where are you based? Would you be open to working remotely or potentially relocating?',
-                MINDSET: 'Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?',
-                DESCRIPTION: 'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration.',
+                INTRODUCTION: 'Hello, my name is Tino Wulf. I am a motivated and reliable IT enthusiast with a strong sense of responsibility and a structured way of thinking.',
+                BASED: 'I am currently based in Rostock, Germany and I am open to working remotely, but I would always prefer working in an office. I am comfortable adapting to different working models.',
+                MINDSET: 'I actively seek new challenges and value feedback as an opportunity to grow both professionally and personally.',
+                DESCRIPTION: 'Through my professional background as an officer and my current further training in frontend development, I have developed a strong interest in technology, problem-solving and continuous self-improvement.',
             },
             SKILLS: {
                 TEC: 'Technologies',
                 HEADLINE: 'Skill set',
-                INTRODUCTION: 'A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.',
+                INTRODUCTION: 'Since web development evolves rapidly, I value continuous improvement and adapt quickly to new technologies and workflows. I developed in HTML, CSS and JavaScript and applied these skills in real projects over time. In addition, I learned how to use AI tools efficiently to support development, debugging and optimization processes and work with Angular to build structured, dynamic web applications.',
                 QUESTION1: 'You need',
                 QUESTION2: 'another Skill?',
                 REQUEST: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
@@ -100,13 +104,17 @@ export class TranslationService {
             },
             PROJECTS: {
                 HEADLINE: 'Featured Projects',
-                INTRODUCTION: 'Explore a selection of my work here - Interact with projects to see my skills in action.'
+                INTRODUCTION: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
+                ABOUT: 'What is this project about?',
+                DESCRIPTION1: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+                DESCRIPTION2: 'Simple browser game built with JavaScript. Control the character, avoid obstacles, collect items, and complete levels. Focus on object-oriented programming and structuring game logic with classes., assign users and categories.',
+                DESCRIPTION3: 'Web-based Pokédex application. Browse and search Pokémon, view stats, types, and abilities in an interactive interface. Highlights fetching data from APIs and handling asynchronous requests.'
             },
             CONTACTME: {
                 CONTACTME: 'Contact me',
                 HEADLINE: `Let's work Together`,
                 PROBLEM: 'Got a problem?',
-                WORTH: 'Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.',
+                WORTH: 'I am always open to discussing ideas, requirements and possible solutions and to explain my skills in more detail. With a structured mindset, reliability and a strong sense of responsibility, I aim to support your projects with practical, well-thought-out solutions and contribute real value to your applications.',
                 Question1: 'Need a Frontend developer?',
                 Question2: `Let's talk!`,
                 NAME: `What's your name?`,

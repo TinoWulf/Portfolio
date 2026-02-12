@@ -3,10 +3,11 @@
     flex-direction: column;
     width: 520px;
     height: 503px;
-    gap: 40px;
+    gap: 30px;
     border-radius: 30px;
     border-width: 1px;
     padding: 32px;
+    padding-bottom: 1px;
     background: #3DCFB61A;
     border: 1px solid #3DCFB6;
 
@@ -23,8 +24,7 @@
     .text-block {
         display: flex;
         width: 456px;
-        height: 247px;
-        gap: 32px;
+        gap: 22px;
         flex-direction: column;
 
         p {

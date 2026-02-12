@@ -1,46 +1,53 @@
 .banner {
+  position: absolute;
+  top: 82vh;
+  left: 0;
+  right: 0;
+  height: 62px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transform: rotate(-3deg);
+  background: #FFFFFF1F;
+  backdrop-filter: blur(5.3px);
+  padding: 12px 32px;
+  box-sizing: border-box;
+
+  .banner-track {
     display: flex;
-    position: absolute;
-    justify-content: center;
+    width: max-content;
+    animation: scroll-banner 15s linear infinite;
+  }
+
+  .banner-content {
+    display: flex;
     align-items: center;
-    width: 110vw;
-    height: 62px;
-    transform: rotate(-3deg);
-    opacity: 1;
-    top: 82vh;
-    left: -21px;
-    padding-top: 12px;
-    padding-right: 32px;
-    padding-bottom: 12px;
-    padding-left: 32px;
     gap: 56px;
-    background: #FFFFFF1F;
-    backdrop-filter: blur(5.3px);
+    white-space: nowrap;
 
-    .banner-content {
-        display: flex;
-        align-items: center;
-        height: 38px;
-        opacity: 1;
-        gap: 56px;
-
-        .point {
-            width: 8px;
-            height: 8px;
-            opacity: 1;
-            border: 1px solid #3DCFB6;
-            border-radius: 50%;
-            background-color: #3DCFB6;
-        }
-
-        sub {
-            font-family: 'Karla';
-            font-weight: 400;
-            font-style: Regular;
-            font-size: 32px;
-            line-height: 120%;
-            letter-spacing: 0%;
-            color: #3DCFB6;
-        }
+    .point {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #3DCFB6;
+      border-radius: 50%;
+      background-color: #3DCFB6;
     }
+
+    sub {
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 120%;
+      color: #3DCFB6;
+    }
+  }
+}
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

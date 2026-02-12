@@ -33,8 +33,8 @@
       </div>
       <div class="text-description">
         <div class="description">
-          <p class="description-headline">What is this project about?</p>
-          <p class="description-text">{{ projects[selectedIndex].description }}</p>
+          <p class="description-headline">{{ translation.translate('PROJECTS.ABOUT') }}</p>
+          <p class="description-text">{{ translation.translate('PROJECTS.DESCRIPTION' + projects[selectedIndex].id) }}</p>
         </div>
         <div class="text-icons">
           <div *ngFor="let tech of projects[selectedIndex].techs">
@@ -44,10 +44,10 @@
         </div>
       </div>
       <div class="text-btns">
-        <button class="button-hover-effect">
+        <button class="button-hover-effect" (click)="navigateToProject(projects[selectedIndex].githubLink)">
           <p>GutHub</p><img src="/assets/img/arrow_outward.png" alt="">
         </button>
-        <button class="button-hover-effect">
+        <button class="button-hover-effect" (click)="navigateToProject(projects[selectedIndex].liveLink)">
           <p>LiveTest</p><img src="/assets/img/arrow_outward.png" alt="">
         </button>
       </div>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslationService } from '../../services/translation.services';
 
 
 @Component({
@@ -10,44 +11,49 @@ import { Component } from '@angular/core';
 })
 export class ProjectTable {
 
+  constructor(public translation: TranslationService) {}
+
   projects = [
     {
       id: 1,
       key: 'join',
       title: 'Join',
       image: '/assets/img/screenshots/join-portfolio.png',
+      liveLink: 'https://tino-wulf.developerakademie.net/Join',
+      githubLink: 'https://github.com/TinoWulf/Join',
       techs: [
         { name: 'JavaScript', icon: '/assets/img/icons/turquoise-icon-javascript.png' },
         { name: 'HTML', icon: '/assets/img/icons/turquoise-icon-html.png' },
         { name: 'CSS', icon: '/assets/img/icons/turquoise-icon-css.png' },
         { name: 'Firebase', icon: '/assets/img/icons/turquoise-icon-firebase.png' }
       ],
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
     },
     {
       id: 2,
       key: 'sharkie',
       title: 'Sharkie',
       image: '/assets/img/screenshots/sharkie-portfolio.png',
+      liveLink: 'https://tino-wulf.developerakademie.net/Sharkie/index.html',
+      githubLink: 'https://github.com/TinoWulf/Sharkie',
       techs: [
         { name: 'JavaScript', icon: '/assets/img/icons/turquoise-icon-javascript.png' },
         { name: 'HTML', icon: '/assets/img/icons/turquoise-icon-html.png' },
         { name: 'CSS', icon: '/assets/img/icons/turquoise-icon-css.png' }
       ],
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
     },
     {
       id: 3,
       key: 'pokedex',
       title: 'Pokedex',
       image: '/assets/img/screenshots/pokedex-portfolio.png',
+      liveLink: 'https://tino-wulf.developerakademie.net/Pokedex',
+      githubLink: 'https://github.com/TinoWulf/Pokedex',
       techs: [
         { name: 'JavaScript', icon: '/assets/img/icons/turquoise-icon-javascript.png' },
         { name: 'HTML', icon: '/assets/img/icons/turquoise-icon-html.png' },
         { name: 'CSS', icon: '/assets/img/icons/turquoise-icon-css.png' },
         { name: 'REST-API', icon: '/assets/img/icons/turquoise-icon-rest-api.png' }
       ],
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'
     }
   ];
 
@@ -77,5 +83,8 @@ export class ProjectTable {
       (this.selectedIndex! - 1 + this.projects.length) % this.projects.length;
   }
 
+  navigateToProject(url: string) {
+    window.open(url, '_blank');
+  }
 
 }
