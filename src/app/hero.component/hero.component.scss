@@ -1,6 +1,7 @@
 .frontpage {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     display: flex;
     align-items: center;
@@ -20,7 +21,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 755px;
+        max-width: 755px;
         height: 216px;
         opacity: 1;
         gap: 40px;
@@ -37,7 +38,7 @@
 
         .title-btns {
             display: flex;
-            width: 363px;
+            max-width: 363px;
             height: 48px;
             opacity: 1;
             gap: 48px;

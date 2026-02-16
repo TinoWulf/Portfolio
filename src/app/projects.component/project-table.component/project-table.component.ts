@@ -7,7 +7,7 @@ import { TranslationService } from '../../services/translation.services';
   selector: 'app-project-table',
   imports: [CommonModule],
   templateUrl: './project-table.component.html',
-  styleUrl: './project-table.component.scss',
+  styleUrls: ['./project-table.component.scss', './project-table.component.mediaquarry.scss'],
 })
 export class ProjectTable {
 
@@ -85,6 +85,11 @@ export class ProjectTable {
 
   navigateToProject(url: string) {
     window.open(url, '_blank');
+  }
+
+  getActiveProjectImage(): string | undefined {
+    const project = this.projects.find(p => p.id === this.activeProject);
+    return project?.image;
   }
 
 }

@@ -1,0 +1,243 @@
+@media (max-width: 1220px) {
+  .body {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 0 12px;
+  }
+
+  .projects-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .projects-table {
+    flex: 0 1 700px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .single-project {
+    width: 100% !important;
+  }
+
+  .project-preview {
+    display: none;
+  }
+
+  .projects-table .single-project .headline {
+    font-size: 20px !important;
+  }
+
+  .projects-table .single-project p {
+    font-size: 16px !important;
+  }
+
+  .overlay-content {
+    flex-wrap: wrap;
+    max-width: 700px !important;
+    padding-top: 10px !important;
+    padding-bottom: 50px !important;
+    height: 98vh !important;
+    gap: 20px !important;
+  }
+
+  .next-btn {
+    bottom: 10px !important;
+
+    p {
+      font-size: 16px !important;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .overlay .overlay-content {
+    width: calc(100% - 40px) !important;
+    gap: 24px !important;
+  }
+
+  .overlay-text {
+    max-width: 100%;
+    order: 1;
+    width: 100%;
+    gap: 20px !important;
+  }
+
+  .shown-project {
+    width: 100%;
+    order: 2;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-wrapper {
+    gap: 16px;
+  }
+
+  .projects-table .single-project .headline {
+    font-size: 18px;
+  }
+
+  .projects-table .single-project p {
+    font-size: 14px;
+  }
+
+  .projects-table {
+    /* allow shrink below 500px */
+    flex: 0 1 500px;
+  }
+
+  .project-preview {
+    height: auto;
+  }
+
+  .single-project {
+    padding: 30px 22px;
+  }
+
+  .overlay .overlay-content .overlay-text .headline-number {
+    /* set CSS variables rather than forcing font-size directly */
+    --headline-number-size: 64px !important;
+    --headline-number-line-height: 64px !important;
+  }
+
+  .overlay .overlay-content .overlay-text .headline-project {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .projects-wrapper {
+    flex-direction: column;
+  }
+
+  .projects-table {
+    /* small screens: table becomes full width */
+    flex: 0 1 100%;
+    width: 100%;
+  }
+
+  .projects-table .single-project {
+    padding: 16px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .project-preview img {
+    width: 100%;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .projects-table .single-project .headline {
+    font-size: 16px;
+  }
+
+  .projects-table .single-project p {
+    font-size: 14px;
+  }
+
+  .overlay .overlay-content {
+    width: calc(100% - 32px) !important;
+    gap: 16px !important;
+  }
+
+  .text-icons {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .overlay .overlay-content .overlay-text .headline-number {
+    --headline-number-size: 40px !important;
+    --headline-number-line-height: 40px !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .text-btns {
+    gap: 12px !important;
+
+    button {
+      padding: 4px 8px !important;
+      gap: 4px !important;
+
+      p {
+        font-size: 16px !important;
+      }
+    }
+  }
+
+  .single-project {
+    padding: 20px 10px;
+  }
+
+  .projects-table .single-project .headline {
+    font-size: 14px;
+  }
+
+  .projects-table .single-project p {
+    font-size: 12px;
+  }
+
+  .projects-table .single-project > div {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .overlay .overlay-content .overlay-text .headline-number {
+    --headline-number-size: 30px !important;
+    --headline-number-line-height: 10px !important;
+    height: auto !important;
+  }
+
+  .overlay .overlay-content .overlay-text .headline-project,
+  .overlay .overlay-content .overlay-text .description-headline,
+  .overlay .overlay-content .overlay-text .description-text {
+    font-size: 16px !important;
+  }
+
+  .overlay .overlay-content .overlay-text .description {
+    gap: 8px !important;
+  }
+
+  .overlay .overlay-content .overlay-text .text-headline {
+    gap: 16px !important;
+  }
+
+  .overlay .overlay-content .overlay-text .text-description {
+    gap: 12px !important;
+  }
+
+  .overlay .overlay-content .overlay-text {
+    gap: 12px !important;
+  }
+
+}
+
+@media (max-width: 350px) {
+  .text-btns {
+    gap: 8px !important;
+
+    button {
+      padding: 4px 6px !important;
+      gap: 4px !important;
+
+      p {
+        font-size: 14px !important;
+      }
+    }
+  }
+  
+}

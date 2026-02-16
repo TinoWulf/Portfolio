@@ -9,7 +9,7 @@ import { TranslationService } from '../services/translation.services';
   standalone: true,
   imports: [SkillBox, CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+  styleUrls: ['./skills.component.scss', './skills.component.mediaquarry.scss'],
 })
 export class Skills {
     constructor(public translation: TranslationService) {}

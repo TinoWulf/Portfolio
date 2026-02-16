@@ -1,8 +1,9 @@
 .featured-projects {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 41px;
+    margin-left: 20px;
+    margin-right: 20px;
 
     .headline-div {
         display: flex;

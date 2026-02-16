@@ -7,27 +7,36 @@
     .about-me {
         display: flex;
         justify-content: space-between;
-        width: 1232px;
-        height: 708px;
+        width: 100%;
+        max-width: 1232px;
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 32px;
+        margin-left: 20px;
+        margin-right: 20px;
 
         img {
-            width: 568px;
-            height: 568px;
+            width: 100%;
+            max-width: 568px;
+            max-height: 568px;
+            display: block;
             position: relative;
-            top: 0;
-            left: 0;
             border-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
             object-fit: cover;
-            object-position: 50% -100px;
+            object-position: 50% 20%;
+            z-index: 2;
+            overflow: hidden;
         }
 
         .info-box {
-            position: relative;
             display: flex;
             flex-direction: column;
-            width: 568px;
-            height: 588px;
-            top: 98px;
+            width: 100%;
+            max-width: 568px;
+            height: auto;
+            margin-top: 98px;
             right: 0;
             gap: 20px;
 
@@ -45,8 +54,9 @@
                 display: flex;
                 flex-direction: column;
 
-                width: 568px;
-                height: 540px;
+                width: 100%;
+                max-width: 568px;
+                height: auto;
                 gap: 30px;
                 border-width: 1px;
                 border-radius: 30px;

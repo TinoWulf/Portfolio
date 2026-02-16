@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-layers',
   imports: [],
   templateUrl: './layers.component.html',
-  styleUrl: './layers.component.scss',
+  styleUrls: ['./layers.component.scss', './layers.component.mediaquarry.scss'],
 })
 export class Layers {
 

@@ -6,7 +6,7 @@ import { TranslationService } from '../../services/translation.services';
   selector: 'app-skill-box',
   imports: [],
   templateUrl: './skill-box.component.html',
-  styleUrl: './skill-box.component.scss',
+  styleUrls: ['./skill-box.component.scss', './skill-box.component.mediaquarry.scss'],
 })
 export class SkillBox {
   constructor(public translation: TranslationService) { }

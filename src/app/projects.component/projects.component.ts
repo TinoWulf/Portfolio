@@ -6,7 +6,7 @@ import { TranslationService } from '../services/translation.services';
   selector: 'app-projects',
   imports: [ProjectTable],
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss', './projects.component.mediaquarry.scss']
 })
 export class Projects {
   constructor(public translation: TranslationService) {}

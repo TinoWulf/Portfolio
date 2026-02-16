@@ -7,7 +7,7 @@ import { TranslationService } from '../services/translation.services';
   selector: 'app-contact-me',
   imports: [ContactSheet],
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss',
+  styleUrls: ['./contact-me.component.scss', './contact-me.component.mediaquarry.scss'],
 })
 export class ContactMe {
   constructor(public translation: TranslationService) {}

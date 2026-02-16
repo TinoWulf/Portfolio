@@ -6,7 +6,7 @@ import { TranslationService } from '../../services/translation.services';
   selector: 'app-banner',
   imports: [],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.scss',
+  styleUrls: ['./banner.component.scss', './banner.component.mediaquarry.scss'],
 })
 export class Banner {
   constructor(public translation: TranslationService) {}

@@ -7,7 +7,7 @@ import { TranslationService } from '../services/translation.services';
   selector: 'app-about-me',
   imports: [ShortProfile],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss',
+  styleUrls: ['./about-me.component.scss', './about-me.component.mediaquarry.scss'],
 })
 export class AboutMe {
   constructor(public translation: TranslationService) {}

@@ -1,0 +1,76 @@
+@media (max-width: 1220px) {
+  .contact-me {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+
+  .body {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-box {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .headline {
+    font-size: 40px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 32px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .answer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .body {
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .headline {
+    font-size: 24px !important;
+  }
+
+  .question {
+    font-size: 16px !important;
+  }
+
+  .text-box {
+    width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .headline {
+    font-size: 20px;
+  }
+}

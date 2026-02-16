@@ -14,7 +14,6 @@
     p {
         font-family: 'FiraCode';
         font-weight: 700;
-        font-style: Bold;
         font-size: 64px;
         line-height: 100%;
         letter-spacing: -3%;
@@ -96,3 +95,4 @@
 .white {
     color: #FFFFFF !important;
 }
+@import './skill-box.component.mediaquarry.scss';

@@ -1,22 +1,35 @@
 <div class="header">
     <div class="header-inner">
         <div class="menu">
-            <div class="language-switch" (click)="toggleLanguage()">
-                <div class="lang-option" [class.active]="currentLang === 'en'">
-                    EN
-                </div>
-                <div class="lang-option" [class.active]="currentLang === 'de'">
-                    DE
-                </div>
+            <div class="language-switch desktop-only" (click)="toggleLanguage()">
+                <div class="lang-option" [class.active]="currentLang === 'en'">EN</div>
+                <div class="lang-option" [class.active]="currentLang === 'de'">DE</div>
             </div>
-            <div class="nav-links">
+            <div class="nav-links desktop-only">
                 <a class="hover-underline" href="#about">{{ translation.translate('HEADER.ABOUTME') }}</a>
                 <a class="hover-underline" href="#skill">{{ translation.translate('HEADER.SKILLS') }}</a>
                 <a class="hover-underline" href="#projects">{{ translation.translate('HEADER.PROJECTS') }}</a>
             </div>
+            <button class="mobile-menu-button mobile-only" aria-label="Open menu" (click)="toggleMobileMenu()">
+                <img src="assets/img/icons/menu icon.png" alt="menu" />
+            </button>
         </div>
         <div class="logo">
             <img src="assets/img/TW logo.png" alt="">
+        </div>
+    </div>
+    <div class="mobile-menu-backdrop" [class.open]="mobileMenuOpen" (click)="toggleMobileMenu()"></div>
+    <div class="mobile-menu mobile-only" [class.open]="mobileMenuOpen">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav">
+                <a class="hover-underline" href="#about" (click)="toggleMobileMenu()">{{ translation.translate('HEADER.ABOUTME') }}</a>
+                <a class="hover-underline" href="#skill" (click)="toggleMobileMenu()">{{ translation.translate('HEADER.SKILLS') }}</a>
+                <a class="hover-underline" href="#projects" (click)="toggleMobileMenu()">{{ translation.translate('HEADER.PROJECTS') }}</a>
+            </nav>
+            <div class="language-switch" (click)="toggleLanguage()">
+                <div class="lang-option" [class.active]="currentLang === 'en'">EN</div>
+                <div class="lang-option" [class.active]="currentLang === 'de'">DE</div>
+            </div>
         </div>
     </div>
 </div>

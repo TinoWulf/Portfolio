@@ -11,7 +11,9 @@
         max-width: 1440px;
 
         .projects-table {
-            width: 50%;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
 
             .single-project {
                 display: flex;
@@ -48,7 +50,8 @@
         }
 
         .project-preview {
-            width: 50%;
+            flex: 1 1 0;
+            width: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -72,6 +75,14 @@
             }
         }
     }
+
+        @media (min-width: 1220px) {
+            .projects-table {
+                width: 700px;
+                max-width: 700px;
+                flex: 0 0 700px;
+            }
+        }
 }
 
 .border-style {
@@ -83,31 +94,12 @@
     color: #3DCFB6 !important;
 }
 
-@media (max-width: 900px) {
-    .projects-wrapper {
-        flex-direction: column;
-
-        .projects-table,
-        .project-preview {
-            width: 100%;
-        }
-
-        .project-preview img {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
-}
-
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    right: 0;
+    width: auto;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
@@ -119,14 +111,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 654px;
-        width: 1248px;
         gap: 50px;
         background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         border: 1px solid #3DCFB6;
         border-radius: 30px;
         border-width: 1px;
         position: relative;
+        width: 100%;
+        max-width: 1248px;
+        margin: 0 24px;
+        box-sizing: border-box;
+        padding: 32px;
+        height: auto;
 
         .close-btn {
             position: absolute;
@@ -179,38 +175,37 @@
 
         .shown-project {
             width: 520px;
-            height: 370px;
+            max-width: 100%;
+            height: auto;
             border-radius: 30px;
             opacity: 1;
-            top: 143px;
-            left: 648px;
+            order: 2;
         }
 
         .overlay-text {
             display: flex;
             flex-direction: column;
             max-width: 480px;
+            width: 100%;
             opacity: 1;
-            top: 91px;
-            left: 80px;
             gap: 40px;
-
+            order: 1;
 
             .text-headline {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
 
-                .headline-number {
-                    font-family: 'Karla';
-                    font-weight: 700;
-                    font-style: Bold;
-                    font-size: 128px;
-                    line-height: 100px;
-                    letter-spacing: -2%;
-                    color: #3DCFB6;
+                    .headline-number {
+                        font-family: 'Karla';
+                        font-weight: 700;
+                        font-style: Bold;
+                        font-size: var(--headline-number-size, 128px);
+                        line-height: var(--headline-number-line-height, 100px);
+                        letter-spacing: -2%;
+                        color: #3DCFB6;
 
-                }
+                    }
 
                 .headline-project {
                     font-family: 'FiraCode';

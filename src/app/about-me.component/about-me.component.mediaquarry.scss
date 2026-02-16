@@ -1,0 +1,54 @@
+@media (max-width: 1220px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center !important;
+    width: 100%;
+    gap: 20px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .about-me img {
+   width: 100%;
+   max-width: 320px;
+   aspect-ratio: 1/1;
+   height: auto;
+   object-position: center;
+  }
+
+  .info-box,
+  .info-text-box {
+    width: 100%;
+    margin-top: 0;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .info-box {
+    margin-top: 20px !important;
+  }
+
+  .info-text-box {
+    padding: 20px !important;
+  }
+
+  .info-text-box p {
+    font-size: 48px !important;
+  }
+
+  .info-text-box sub {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .info-text-box p {
+    font-size: 30px !important;
+  }
+}

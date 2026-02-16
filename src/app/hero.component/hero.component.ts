@@ -9,7 +9,7 @@ import { TranslationService } from '../services/translation.services';
   selector: 'app-hero',
   imports: [Banner, Layers, Header],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+  styleUrls: ['./hero.component.scss', './hero.component.mediaquarry.scss'],
 })
 export class Hero {
   constructor(public translation: TranslationService) {}

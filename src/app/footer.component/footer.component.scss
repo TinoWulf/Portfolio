@@ -12,6 +12,8 @@
         align-items: center;
         justify-content: space-between;
         max-width: 1440px;
+        margin-left: 20px;
+        margin-right: 20px;
 
         .left-content {
             height: 100%;
@@ -56,6 +58,8 @@
             display: flex;
             flex-direction: column;
             justify-content: end;
+            margin-left: auto;
+            justify-content: flex-end;
             gap: 8px;
 
             a {

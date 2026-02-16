@@ -1,9 +1,9 @@
 <div class="body">
-  <div class="projects-wrapper">
+  <div class="projects-wrapper" (mouseleave)="activeProject = null">
 
     <div class="projects-table border-style">
       <div class="single-project" *ngFor="let project of projects; let i = index" (click)="openOverlay(i)"
-        (mouseenter)="activeProject = project.id" (mouseleave)="activeProject = null"
+        (mouseenter)="activeProject = project.id"
         [ngClass]="{ 'border-style': i === middleIndex }">
         <p class="headline">{{ project.title }}</p>
 

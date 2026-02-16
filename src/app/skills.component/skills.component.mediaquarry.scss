@@ -1,0 +1,32 @@
+@media (max-width: 1220px) {
+  .body {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-set,
+  .skill-icons {
+    align-items: center;
+  }
+
+  .skill-icons {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .skill-icons {
+    gap: 18px !important;
+  }
+
+  .skill-icons img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .skill-icons div {
+    width: 64px !important;
+  }
+}

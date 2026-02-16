@@ -1,0 +1,69 @@
+@media (max-width: 992px) {
+  .body {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .form>.border-design,
+  .form>div:not(.send-btn) {
+    padding: 20px;
+  }
+
+  .form input {
+    font-size: 16px;
+  }
+
+  .send-btn {
+    padding-top: 24px;
+  }
+
+  .send-btn button {
+    width: 120px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+    .check-box-div {
+      flex-wrap: wrap;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .body {
+    width: 100%;
+  }
+
+  .send-btn .privacy-policy p {
+    font-size: 14px;
+  }
+
+  .checkbox .box {
+    width: 16px;
+    height: 16px;
+  }
+
+  .send-btn button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .form>div {
+    padding: 12px;
+  }
+
+  .send-btn button {
+    height: 40px;
+  }
+
+  .body {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    max-width: 616px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}

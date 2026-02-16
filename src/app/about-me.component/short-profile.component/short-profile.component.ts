@@ -6,7 +6,7 @@ import { TranslationService } from '../../services/translation.services';
   selector: 'app-short-profile',
   imports: [],
   templateUrl: './short-profile.component.html',
-  styleUrl: './short-profile.component.scss',
+  styleUrls: ['./short-profile.component.scss', './short-profile.component.mediaquarry.scss'],
 })
 export class ShortProfile {
     constructor(public translation: TranslationService) {}

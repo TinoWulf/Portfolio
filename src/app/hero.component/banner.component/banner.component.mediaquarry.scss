@@ -1,0 +1,55 @@
+@media (max-width: 993px) {
+
+  .banner {
+    height: auto !important;
+  }
+
+  .banner-track {
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  .banner-content {
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+    gap: 24px;
+  }
+
+  .banner-content sub {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .banner {
+    padding: 8px 12px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .banner-content sub {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .banner-content sub {
+    font-size: 14px;
+  }
+
+  .banner {
+    padding: 6px 8px !important;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+  }
+
+  .banner-track {
+    gap: 12px;
+  }
+}

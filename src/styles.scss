@@ -9,9 +9,23 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden !important;
+}
+
 body {
-    overflow-x: hidden;
     background-color: #1C1C1C;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p, span, a, li, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .content-wrapper {
@@ -108,4 +122,20 @@ body {
 @font-face {
     font-family: 'Karla';
     src: url('./assets/font/Karla-VariableFont_wght.ttf') format('woff2');
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    gap: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+[class*="body"] > *,
+.projects-wrapper > *,
+.about-me > *,
+.header-inner > *,
+.content-wrapper > * {
+    min-width: 0;
 }

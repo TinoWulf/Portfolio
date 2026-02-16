@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './contact-sheet.component.html',
-  styleUrl: './contact-sheet.component.scss',
+  styleUrls: ['./contact-sheet.component.scss', './contact-sheet.component.mediaquarry.scss'],
 })
 export class ContactSheet {
   isChecked = false;
