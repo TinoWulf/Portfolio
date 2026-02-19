@@ -1,5 +1,6 @@
 .body {
-    height: 126px;
+    height: auto;
+    min-height: 126px;
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -8,7 +9,7 @@
     .footer {
         display: flex;
         width: 100%;
-        height: 100%;
+        height: auto;
         align-items: center;
         justify-content: space-between;
         max-width: 1440px;
@@ -16,7 +17,7 @@
         margin-right: 20px;
 
         .left-content {
-            height: 100%;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -54,10 +55,9 @@
         }
 
         .right-content {
-            height: 100%;
+            height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: end;
             margin-left: auto;
             justify-content: flex-end;
             gap: 8px;

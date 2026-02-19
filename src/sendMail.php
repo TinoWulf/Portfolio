@@ -29,7 +29,15 @@ switch ($_SERVER['REQUEST_METHOD']) {
             // Additional headers
             $headers[] = "From: noreply@mywebsite.com";
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
+            $sent = mail($recipient, $subject, $message, implode("\r\n", $headers));
+            // Return JSON response for frontend
+            header('Content-Type: application/json; charset=utf-8');
+            if ($sent) {
+                echo json_encode(['ok' => true, 'info' => 'sent']);
+            } else {
+                http_response_code(500);
+                echo json_encode(['ok' => false, 'error' => 'mail_failed']);
+            }
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);

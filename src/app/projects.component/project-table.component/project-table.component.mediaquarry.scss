@@ -13,7 +13,7 @@
   }
 
   .projects-table {
-    flex: 0 1 700px;
+    flex: 0 0 700px;
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
@@ -88,8 +88,7 @@
   }
 
   .projects-table {
-    /* allow shrink below 500px */
-    flex: 0 1 500px;
+    flex: 0 0 500px;
   }
 
   .project-preview {

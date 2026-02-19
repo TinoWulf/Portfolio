@@ -25,7 +25,7 @@
 
     .nav-links {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         gap: 12px !important;
     }
 
@@ -118,6 +118,7 @@
         border-radius: 8px;
         width: 100%;
         box-sizing: border-box;
+        white-space: nowrap;
     }
 
     .mobile-menu {

@@ -42,7 +42,7 @@
             <div class="privacy-policy">
                 <div class="check-box-div">
                     <label class="checkbox">
-                        <input type="checkbox" (change)="onCheckboxChange($event)">
+                        <input type="checkbox" name="privacy" [(ngModel)]="isChecked" (change)="onCheckboxChange($event)">
                         <span class="box"></span>
                     </label>
                     <p>{{ translation.translate('CONTACTME.POLICY1') }}</p>
@@ -60,7 +60,8 @@
                 <p>{{ translation.translate('CONTACTME.BTN') }}</p>
             </button>
     </div>
-
     </form>
-
 </div>
+    <div class="send-confirmation" [class.visible]="showSuccess">
+        <p>{{ translation.translate('CONTACTME.SENT') || 'Message sent' }}</p>
+    </div>

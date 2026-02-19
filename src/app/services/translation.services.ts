@@ -66,7 +66,8 @@ export class TranslationService {
                 POLICY2: 'Datenschutzerklärung',
                 POLICY3: 'gelesen und stimme wie beschrieben zu.',
                 ALLERT: 'Bitte akzeptiere die Datenschutzerklärung.',
-                BTN: 'Sag Hallo!'
+                BTN: 'Sag Hallo!',
+                SENT: 'Nachricht gesendet, danke für deine Kontaktaufnahme! Ich werde mich so schnell wie möglich bei dir melden.'
             }
             ,
             POLICY: {
@@ -116,7 +117,7 @@ export class TranslationService {
                 WHOIAM: 'Who I Am',
                 ABOUTME: 'About me',
                 INTRODUCTION: 'Hello, my name is Tino Wulf. I am a motivated and reliable IT enthusiast with a strong sense of responsibility and a structured way of thinking.',
-                BASED: 'I am currently based in Rostock, Germany and I am open to working remotely, but I would always prefer working in an office. I am comfortable adapting to different working models.',
+                BASED: 'I am currently based in Rostock, Germany and I am open to work remotely, but I would always prefer working in an office. I am comfortable adapting to different working models.',
                 MINDSET: 'I actively seek new challenges and value feedback as an opportunity to grow both professionally and personally.',
                 DESCRIPTION: 'Through my professional background as an officer and my current further training in frontend development, I have developed a strong interest in technology, problem-solving and continuous self-improvement.',
             },
@@ -154,7 +155,8 @@ export class TranslationService {
                 POLICY2: 'privacy policy',
                 POLICY3: 'and agree to the processing of my data as outlined.',
                 ALLERT: 'Please accept the privacy policy.',
-                BTN: 'Say Hello!'
+                BTN: 'Say Hello!',
+                SENT: 'Message sent, thank you for reaching out! I will get back to you as soon as possible.'
             }
             ,
             POLICY: {

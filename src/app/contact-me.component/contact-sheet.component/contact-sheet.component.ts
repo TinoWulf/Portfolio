@@ -16,6 +16,8 @@ export class ContactSheet {
   isChecked = false;
   triedSubmit = false;
   http = inject(HttpClient);
+  showSuccess = false;
+  private _successTimer: any = null;
 
   constructor(public translation: TranslationService) { }
 
@@ -26,13 +28,13 @@ export class ContactSheet {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    endPoint: 'https://tinowulf.de/sendMail.php',
+    body: (payload: any) => payload,
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
+      responseType: 'json' as const,
     },
   };
 
@@ -49,11 +51,13 @@ export class ContactSheet {
     if (!this.isChecked) return;
     if (form.invalid) return;
     if (form.submitted && form.valid && this.isChecked) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post<any>(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-
             form.resetForm();
+            this.showSuccess = true;
+            if (this._successTimer) clearTimeout(this._successTimer);
+            this._successTimer = setTimeout(() => { this.showSuccess = false; }, 3000);
           },
           error: (error: any) => {
             console.error(error);
@@ -61,17 +65,8 @@ export class ContactSheet {
           complete: () => console.info('send post complete'),
         });
 
-
-
-      console.log('Form gesendet');
-      console.log('Name:', this.contactData.name);
-      console.log('Email:', this.contactData.email);
-      console.log('Message:', this.contactData.message);
-
-      form.resetForm();
       this.isChecked = false;
       this.triedSubmit = false;
     }
   }
-
 }
