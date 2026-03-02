@@ -1,3 +1,23 @@
+.layers {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+
+    .layers-inner {
+        position: relative;
+        width: calc(100% - 40px);
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
 .layer-right {
     width: 32px;
     height: 480px;
@@ -9,6 +29,7 @@
     align-items: center;
     gap: 24px;
     opacity: 1;
+    pointer-events: auto;
 
     .layer-email {
         display: flex;
@@ -37,9 +58,21 @@
         flex-direction: column;
         align-items: center;
 
+        .icon-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         img {
             height: 32px;
             width: 32px;
+            transform: scale(1);
+            transition: transform 200ms ease-in-out;
+        }
+
+        .icon-link:hover img {
+            transform: scale(1.1);
         }
     }
 }
@@ -54,6 +87,7 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    pointer-events: auto;
 
     .layer-scroll-down {
         width: 30px;

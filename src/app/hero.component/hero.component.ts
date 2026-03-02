@@ -7,10 +7,21 @@ import { TranslationService } from '../services/translation.services';
 
 @Component({
   selector: 'app-hero',
+  standalone: true,
   imports: [Banner, Layers, Header],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss', './hero.component.mediaquarry.scss'],
 })
 export class Hero {
   constructor(public translation: TranslationService) {}
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }

@@ -23,8 +23,8 @@
   </div>
 </div>
 
-<div class="overlay" *ngIf="isOverlayOpen && selectedIndex !== null">
-  <div class="overlay-content">
+<dialog class="overlay" *ngIf="isOverlayOpen && selectedIndex !== null" open (click)="closeOverlay()">
+  <div class="overlay-content" (click)="$event.stopPropagation()">
     <img class="close-btn" (click)="closeOverlay()" src="/assets/img/close_small.png" alt="">
     <div class="overlay-text">
       <div class="text-headline">
@@ -45,7 +45,7 @@
       </div>
       <div class="text-btns">
         <button class="button-hover-effect" (click)="navigateToProject(projects[selectedIndex].githubLink)">
-          <p>GutHub</p><img src="/assets/img/arrow_outward.png" alt="">
+          <p>GitHub</p><img src="/assets/img/arrow_outward.png" alt="">
         </button>
         <button class="button-hover-effect" (click)="navigateToProject(projects[selectedIndex].liveLink)">
           <p>LiveTest</p><img src="/assets/img/arrow_outward.png" alt="">
@@ -58,4 +58,4 @@
       <img src="/assets/img/arrow_forward.png" alt="">
     </div>
   </div>
-</div>
+</dialog>

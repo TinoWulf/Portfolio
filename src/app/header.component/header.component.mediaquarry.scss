@@ -4,7 +4,7 @@
         padding: 0 24px;
     }
 
-    .header-inner img {
+    .mobile-menu-button img {
         width: 72px;
         height: 54px;
     }
@@ -20,7 +20,10 @@
     .header-inner {
         gap: 8px;
         align-items: center;
-        max-width: calc(100% - 24px);
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .nav-links {
@@ -78,6 +81,16 @@
         width: 48px;
         height: 48px;
         object-fit: contain;
+    }
+
+    .mobile-menu-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 220ms ease-in-out;
+        z-index: 55;
     }
 
     .mobile-menu {

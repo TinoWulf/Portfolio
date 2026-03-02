@@ -2,6 +2,8 @@
   .body {
     width: 100%;
     padding: 0 16px;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .form>.border-design,
@@ -25,7 +27,20 @@
 
 @media (max-width: 768px) {
     .check-box-div {
-      flex-wrap: wrap;
+      flex-wrap: wrap !important; 
+  }
+
+  .form .field-group .validation-bubble {
+    position: static !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+    pointer-events: auto !important;
+  }
+
+  .form .field-group .validation-bubble::after {
+    display: none !important;
   }
   
 }
@@ -33,10 +48,12 @@
 @media (max-width: 576px) {
   .body {
     width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .send-btn .privacy-policy p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .checkbox .box {
@@ -46,6 +63,29 @@
 
   .send-btn button {
     width: 100%;
+  }
+
+  .form .field-group {
+    position: relative;
+  }
+
+  .form .field-group .validation-bubble {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: min(48%, 180px);
+    min-height: auto;
+    margin-top: 0;
+    padding: 6px 8px;
+    gap: 2px;
+    border-radius: 10px;
+    z-index: 20;
+  }
+
+  .form .field-group .validation-bubble .bubble-title,
+  .form .field-group .validation-bubble .bubble-text {
+    font-size: 16px;
+    line-height: 120%;
   }
 }
 

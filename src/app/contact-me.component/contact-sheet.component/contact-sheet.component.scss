@@ -15,6 +15,7 @@
             gap: 10px;
             border-bottom-width: 1px;
             padding: 32px;
+            position: relative;
 
             p {
                 font-family: 'FiraCode';
@@ -36,11 +37,68 @@
                 background: transparent;
                 border: none;
                 color: #FFFFFF;
+                caret-color: #FFFFFF;
 
                 &:focus {
                     outline: none;
                     outline-offset: 6px;
                 }
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-text-fill-color: #FFFFFF;
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+                    box-shadow: 0 0 0 1000px transparent inset;
+                    transition: background-color 5000s ease-in-out 0s;
+                    caret-color: #FFFFFF;
+                }
+            }
+
+            .validation-bubble {
+                position: absolute;
+                right: 24px;
+                top: 20px;
+                width: 260px;
+                min-height: 96px;
+                border-radius: 14px;
+                background: #FFFFFF;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                z-index: 15;
+                pointer-events: none;
+
+                .bubble-title {
+                    margin: 0;
+                    font-family: 'Karla';
+                    font-size: 14px;
+                    line-height: 120%;
+                    font-weight: 700;
+                    color: #1C1C1C;
+                }
+
+                .bubble-text {
+                    margin: 0;
+                    font-family: 'Karla';
+                    font-size: 14px;
+                    line-height: 130%;
+                    font-weight: 400;
+                    color: #1C1C1C;
+                }
+            }
+
+            .validation-bubble::after {
+                content: '';
+                position: absolute;
+                left: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 10px solid #FFFFFF;
             }
         }
 

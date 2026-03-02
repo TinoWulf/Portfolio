@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../services/translation.services';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss', './footer.component.mediaquarry.scss'],
 })
 export class Footer {
-
+  constructor(public translation: TranslationService) {}
 }

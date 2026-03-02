@@ -65,10 +65,14 @@
 
     .title-btns {
       gap: 20px !important;
+      flex-wrap: nowrap;
 
       button {
           padding: 8px 16px !important;
           height: auto !important;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
       }
     }
 
@@ -78,7 +82,7 @@
 
     .title-btns button sub {
       font-size: 16px !important;
-      white-space: normal;
+      white-space: nowrap;
     }
 
     sub {
@@ -107,5 +111,19 @@
     padding-right: 8px;
     max-width: calc(100% - 32px);
     width: 100%;
+  }
+
+  .frontpage .title-cache .title-btns {
+    gap: 12px !important;
+    max-width: 100%;
+  }
+
+  .frontpage .title-cache .title-btns button {
+    padding: 8px 12px !important;
+  }
+
+  .frontpage .title-cache .title-btns button sub {
+    font-size: 16px !important;
+    white-space: nowrap !important;
   }
 }

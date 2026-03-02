@@ -1,11 +1,11 @@
 <app-header></app-header>
 <div class="frontpage">
-    <sub>Frontend Developer</sub>
+    <sub>{{ translation.translate('HERO.ROLE') }}</sub>
     <div class="title-cache">
         <sub>Tino Wulf</sub>
         <div class="title-btns">
-            <button class="button-hover-effect"><sub>{{ translation.translate('BUTTONS.WORKBTN') }}</sub></button>
-            <button class="button-hover-effect"><sub>{{ translation.translate('BUTTONS.CONTACTBTN') }}</sub></button>
+            <button (click)="scrollToSection('projects')" class="button-hover-effect"><sub>{{ translation.translate('BUTTONS.WORKBTN') }}</sub></button>
+            <button (click)="scrollToSection('contact-me')" class="button-hover-effect"><sub>{{ translation.translate('BUTTONS.CONTACTBTN') }}</sub></button>
         </div>
     </div>
 </div>

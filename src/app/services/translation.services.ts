@@ -5,7 +5,8 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root'
 })
 export class TranslationService {
-    private languageSubject = new BehaviorSubject<'de' | 'en'>('en');
+    private readonly LANG_STORAGE_KEY = 'portfolio_lang';
+    private languageSubject = new BehaviorSubject<'de' | 'en'>(this.getInitialLanguage());
     language$ = this.languageSubject.asObservable();
 
     private translations = {
@@ -16,13 +17,16 @@ export class TranslationService {
                 PROJECTS: 'Projekte'
             },
             BUTTONS: {
-                WORKBTN: 'Meine Projecte',
+                WORKBTN: 'Meine Projekte',
                 CONTACTBTN: 'Schreib mir',
             },
             BANNER: {
                 LOCATION: 'Wohnhaft in Rostock',
                 AVAILABILITY: 'Verfügbar für Homeoffice und Büro',
                 WORK: 'Bereit direkt anzufangen'
+            },
+            HERO: {
+                ROLE: 'Frontend Entwickler'
             },
             ABOUTME: {
                 WHOIAM: 'Wer ich bin',
@@ -39,7 +43,9 @@ export class TranslationService {
                 QUESTION1: 'Du suchst',
                 QUESTION2: 'weitere Fähigkeiten?',
                 REQUEST: 'Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.',
-                BTN: 'Lass uns reden'
+                BTN: 'Lass uns reden',
+                MINDSET_LABEL: 'Growth Mindset',
+                MINDSET_TOOLTIP: 'Ich habe besonderes Interesse daran, Backend zu lernen'
             },
             PROJECTS: {
                 HEADLINE: 'Ausgewählte Projekte',
@@ -67,8 +73,20 @@ export class TranslationService {
                 POLICY3: 'gelesen und stimme wie beschrieben zu.',
                 ALLERT: 'Bitte akzeptiere die Datenschutzerklärung.',
                 BTN: 'Sag Hallo!',
-                SENT: 'Nachricht gesendet, danke für deine Kontaktaufnahme! Ich werde mich so schnell wie möglich bei dir melden.'
+                SENT: 'Nachricht gesendet, danke für deine Kontaktaufnahme! Ich werde mich so schnell wie möglich bei dir melden.',
+                VALIDATION_TITLE: 'Bitte gültig ausfüllen',
+                NAME_REQUIRED: 'Bitte gib deinen Namen ein.',
+                NAME_INVALID: 'Der Name muss mindestens 2 Zeichen enthalten und darf nur Buchstaben enthalten.',
+                EMAIL_REQUIRED: 'Bitte gib deine E-Mail-Adresse ein.',
+                EMAIL_INVALID: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+                MESSAGE_REQUIRED: 'Bitte gib eine Nachricht ein.',
+                MESSAGE_INVALID: 'Die Nachricht muss mindestens 10 Zeichen enthalten.',
+                GENERIC_INVALID: 'Bitte prüfe dieses Feld.'
+            },
+            FOOTER: {
+                LEGAL_NOTICE: 'Impressum'
             }
+
             ,
             POLICY: {
                 TITLE: 'Datenschutzerklärung',
@@ -113,6 +131,9 @@ export class TranslationService {
                 AVAILABILITY: 'Available for remote and office work',
                 WORK: 'Open to work'
             },
+            HERO: {
+                ROLE: 'Frontend Developer'
+            },
             ABOUTME: {
                 WHOIAM: 'Who I Am',
                 ABOUTME: 'About me',
@@ -128,7 +149,9 @@ export class TranslationService {
                 QUESTION1: 'You need',
                 QUESTION2: 'another Skill?',
                 REQUEST: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
-                BTN: `Let's talk`
+                BTN: `Let's talk`,
+                MINDSET_LABEL: 'Growth Mindset',
+                MINDSET_TOOLTIP: 'I have special interest in learning Backend'
             },
             PROJECTS: {
                 HEADLINE: 'Featured Projects',
@@ -156,8 +179,20 @@ export class TranslationService {
                 POLICY3: 'and agree to the processing of my data as outlined.',
                 ALLERT: 'Please accept the privacy policy.',
                 BTN: 'Say Hello!',
-                SENT: 'Message sent, thank you for reaching out! I will get back to you as soon as possible.'
+                SENT: 'Message sent, thank you for reaching out! I will get back to you as soon as possible.',
+                VALIDATION_TITLE: 'Please enter valid data',
+                NAME_REQUIRED: 'Please enter your name.',
+                NAME_INVALID: 'Name must contain at least 2 characters and letters only.',
+                EMAIL_REQUIRED: 'Please enter your email address.',
+                EMAIL_INVALID: 'Please enter a valid email address.',
+                MESSAGE_REQUIRED: 'Please enter a message.',
+                MESSAGE_INVALID: 'Message must contain at least 10 characters.',
+                GENERIC_INVALID: 'Please check this field.'
+            },
+            FOOTER: {
+                LEGAL_NOTICE: 'Legal Notice'
             }
+
             ,
             POLICY: {
                 TITLE: 'Legal Notice',
@@ -204,10 +239,41 @@ export class TranslationService {
         }
     };
 
+    private getInitialLanguage(): 'de' | 'en' {
+        const savedLanguage = this.readStoredLanguage();
+        return savedLanguage ?? 'en';
+    }
+
+    private readStoredLanguage(): 'de' | 'en' | null {
+        if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+            return null;
+        }
+
+        const storedLanguage = localStorage.getItem(this.LANG_STORAGE_KEY);
+        return storedLanguage === 'de' || storedLanguage === 'en' ? storedLanguage : null;
+    }
+
+    private storeLanguage(language: 'de' | 'en'): void {
+        if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+            return;
+        }
+
+        localStorage.setItem(this.LANG_STORAGE_KEY, language);
+    }
+
+    getLanguage(): 'de' | 'en' {
+        return this.languageSubject.value;
+    }
+
+    setLanguage(language: 'de' | 'en'): void {
+        this.languageSubject.next(language);
+        this.storeLanguage(language);
+    }
+
     // change language
     toggleLanguage() {
         const newLang = this.languageSubject.value === 'de' ? 'en' : 'de';
-        this.languageSubject.next(newLang);
+        this.setLanguage(newLang);
     }
 
     // Get translation

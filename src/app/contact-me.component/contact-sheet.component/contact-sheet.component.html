@@ -1,20 +1,24 @@
 <div class="body">
     <form class="form" #contactForm="ngForm" novalidate (ngSubmit)="onSubmitClick(contactForm)">
 
-        <div class="border-design" 
-            [class.invalid]="name.invalid && (name.touched || triedSubmit)">
+        <div class="field-group border-design">
             <p>{{ translation.translate('CONTACTME.NAME') }}</p>
             <input
             [(ngModel)]="contactData.name"
             name="name"
             #name="ngModel"
             required
+            minlength="2"
+            pattern="[a-zA-ZäöüÄÖÜß\s\-']+"
             type="text"
             placeholder="{{ translation.translate('CONTACTME.NAMEPLACEHOLDER') }}">
+            <div class="validation-bubble" *ngIf="showValidationBubble(name)">
+                <p class="bubble-title">{{ translation.translate('CONTACTME.VALIDATION_TITLE') }}</p>
+                <p class="bubble-text">{{ getValidationMessage('name', name) }}</p>
+            </div>
         </div>
 
-        <div
-            [class.invalid]="email.invalid && (email.touched || triedSubmit)">
+        <div class="field-group">
             <p>{{ translation.translate('CONTACTME.EMAIL') }}</p>
             <input
             [(ngModel)]="contactData.email"
@@ -24,18 +28,26 @@
             email
             type="email"
             placeholder="{{ translation.translate('CONTACTME.EMAILPLACEHOLDER') }}">
+            <div class="validation-bubble" *ngIf="showValidationBubble(email)">
+                <p class="bubble-title">{{ translation.translate('CONTACTME.VALIDATION_TITLE') }}</p>
+                <p class="bubble-text">{{ getValidationMessage('email', email) }}</p>
+            </div>
         </div>
 
-        <div class="border-design" 
-            [class.invalid]="message.invalid && (message.touched || triedSubmit)">
+        <div class="field-group border-design">
             <p>{{ translation.translate('CONTACTME.HELP') }}</p>
             <input
             [(ngModel)]="contactData.message"
             name="message"
             #message="ngModel"
             required
+            minlength="10"
             type="text"
             placeholder="{{ translation.translate('CONTACTME.HELPPLACEHOLDER') }}">
+            <div class="validation-bubble" *ngIf="showValidationBubble(message)">
+                <p class="bubble-title">{{ translation.translate('CONTACTME.VALIDATION_TITLE') }}</p>
+                <p class="bubble-text">{{ getValidationMessage('message', message) }}</p>
+            </div>
         </div>
 
         <div class="send-btn">

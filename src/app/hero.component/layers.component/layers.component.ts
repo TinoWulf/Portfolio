@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-layers',
+  standalone: true,
   imports: [],
   templateUrl: './layers.component.html',
   styleUrls: ['./layers.component.scss', './layers.component.mediaquarry.scss'],
