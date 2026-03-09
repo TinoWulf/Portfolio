@@ -13,6 +13,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact-sheet.component.scss', './contact-sheet.component.mediaquarry.scss'],
 })
 export class ContactSheet {
+  private readonly MIN_NAME_CHARS = 2;
+  private readonly MIN_MESSAGE_CHARS = 10;
   isChecked = false;
   triedSubmit = false;
   http = inject(HttpClient);
@@ -61,6 +63,10 @@ export class ContactSheet {
     }, 3000);
   }
 
+  private getNonWhitespaceLength(value: string): number {
+    return (value || '').replace(/\s/g, '').length;
+  }
+
   getValidationMessage(field: 'name' | 'email' | 'message', control: NgModel): string {
     if (!control?.errors) {
       return '';
@@ -73,6 +79,15 @@ export class ContactSheet {
     }
 
     if (field === 'name' && (control.errors['minlength'] || control.errors['pattern'])) {
+      const currentLength = this.getNonWhitespaceLength(this.contactData.name);
+      const remaining = this.MIN_NAME_CHARS - currentLength;
+
+      if (remaining > 0) {
+        return this.translation
+          .translate('CONTACTME.NAME_MIN_REMAINING')
+          .replace('{count}', String(remaining));
+      }
+
       return this.translation.translate('CONTACTME.NAME_INVALID');
     }
 
@@ -80,7 +95,16 @@ export class ContactSheet {
       return this.translation.translate('CONTACTME.EMAIL_INVALID');
     }
 
-    if (field === 'message' && control.errors['minlength']) {
+    if (field === 'message' && (control.errors['minlength'] || control.errors['pattern'])) {
+      const currentLength = this.getNonWhitespaceLength(this.contactData.message);
+      const remaining = this.MIN_MESSAGE_CHARS - currentLength;
+
+      if (remaining > 0) {
+        return this.translation
+          .translate('CONTACTME.MESSAGE_MIN_REMAINING')
+          .replace('{count}', String(remaining));
+      }
+
       return this.translation.translate('CONTACTME.MESSAGE_INVALID');
     }
 

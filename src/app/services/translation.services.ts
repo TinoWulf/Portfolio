@@ -76,23 +76,58 @@ export class TranslationService {
                 SENT: 'Nachricht gesendet, danke für deine Kontaktaufnahme! Ich werde mich so schnell wie möglich bei dir melden.',
                 VALIDATION_TITLE: 'Bitte gültig ausfüllen',
                 NAME_REQUIRED: 'Bitte gib deinen Namen ein.',
+                NAME_MIN_REMAINING: 'Bitte gib noch {count} Buchstaben ein.',
                 NAME_INVALID: 'Der Name muss mindestens 2 Zeichen enthalten und darf nur Buchstaben enthalten.',
                 EMAIL_REQUIRED: 'Bitte gib deine E-Mail-Adresse ein.',
                 EMAIL_INVALID: 'Bitte gib eine gültige E-Mail-Adresse ein.',
                 MESSAGE_REQUIRED: 'Bitte gib eine Nachricht ein.',
+                MESSAGE_MIN_REMAINING: 'Bitte gib noch {count} Zeichen ein.',
                 MESSAGE_INVALID: 'Die Nachricht muss mindestens 10 Zeichen enthalten.',
                 GENERIC_INVALID: 'Bitte prüfe dieses Feld.'
             },
             FOOTER: {
                 LEGAL_NOTICE: 'Impressum'
-            }
-
-            ,
+            },
             POLICY: {
-                TITLE: 'Datenschutzerklärung',
+                TITLE: 'Impressum',
                 INTRO: 'Diese Datenschutzerklärung erklärt, wie ich personenbezogene Daten sammle und verwende.',
                 LAST_UPDATED: 'Zuletzt aktualisiert:',
                 SECTIONS: {
+                    IMPRINT: {
+                        TITLE: 'Impressum',
+                        CONTENT1: 'Tino Willy Wulf',
+                        CONTENT2: 'Wiggersstraße 9',
+                        CONTENT3: '18057 Rostock',
+                        CONTENT4: 'Deutschland'
+                    },
+                    EXPLORING: {
+                        TITLE: 'Kontakt',
+                        CONTENT: 'wulf.tino.gz@gmail.com'
+                    },
+                    ACCEPTANCE: {
+                        TITLE: 'Akzeptanz der Bedingungen',
+                        CONTENT: 'Durch den Zugriff auf und die Nutzung von Portfolio erkennst du die folgenden Bedingungen sowie etwaige Richtlinien, Hinweise oder spätere Änderungen an. Wir können diese Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.'
+                    },
+                    SCOPE: {
+                        TITLE: 'Geltungsbereich und Eigentum am Produkt',
+                        CONTENT: 'Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH erstellt. Es dient Ausbildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher kann keine dauerhafte Verfügbarkeit, Zuverlässigkeit oder Fehlerfreiheit garantiert werden. Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Jede unbefugte Nutzung, Vervielfältigung, Änderung oder Verbreitung des Designs ist untersagt.'
+                    },
+                    PROPRIETARY: {
+                        TITLE: 'Eigentumsrechte',
+                        CONTENT: 'Abgesehen vom Design der Developer Akademie GmbH behalten wir alle Rechte an Portfolio, einschließlich urheberrechtlich geschützter Inhalte, Marken und sonstiger proprietärer Informationen.'
+                    },
+                    USE: {
+                        TITLE: 'Nutzung des Produkts',
+                        CONTENT: 'Portfolio darf ausschließlich für rechtmäßige Zwecke und im Einklang mit den geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung für rechtswidrige Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist untersagt. Für Interaktionen mit anderen Nutzern bist du selbst verantwortlich.'
+                    },
+                    DISCLAIMER: {
+                        TITLE: 'Haftungsausschluss und Haftungsbeschränkung',
+                        CONTENT: 'Portfolio wird ohne Gewähr bereitgestellt, ausdrücklich oder stillschweigend, einschließlich aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten. In keinem Fall haften wir oder die Developer Akademie für direkte, indirekte, zufällige, besondere oder Folgeschäden, einschließlich entgangenen Gewinns, Goodwill-Verlust, Nutzungs- oder Datenverlust, auch wenn auf die Möglichkeit solcher Schäden hingewiesen wurde.'
+                    },
+                    INDEMNITY: {
+                        TITLE: 'Freistellung',
+                        CONTENT: 'Du erklärst dich damit einverstanden, uns, die Developer Akademie sowie verbundene Partner, Organe, Vertreter und Mitarbeitende von allen Ansprüchen, Forderungen, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, die aus deiner Nutzung von Portfolio oder einem Verstoß gegen dieses Impressum entstehen.'
+                    },
                     COLLECTION: {
                         TITLE: 'Welche Daten werden gesammelt?',
                         CONTENT: 'Kontaktinformationen, freiwillige Angaben aus Formularen und technische Metadaten.'
@@ -110,7 +145,8 @@ export class TranslationService {
                         CONTENT: 'Sie können Zugang, Berichtigung oder Löschung Ihrer Daten verlangen.'
                     }
                 },
-                CONTACT: 'Bei Fragen zur Datenschutzerklärung kontaktieren Sie mich bitte unter:',
+                CONTACT: 'Bei Fragen kontaktieren Sie mich bitte unter: wulf.tino.gz@gmail.com',
+                DATE: 'Datum: 11.02.2026',
                 BACK_BTN: 'Zurück',
                 ACCEPT_BTN: 'Akzeptieren',
                 DECLINE_BTN: 'Ablehnen'
@@ -182,18 +218,18 @@ export class TranslationService {
                 SENT: 'Message sent, thank you for reaching out! I will get back to you as soon as possible.',
                 VALIDATION_TITLE: 'Please enter valid data',
                 NAME_REQUIRED: 'Please enter your name.',
+                NAME_MIN_REMAINING: 'Please enter {count} more letters.',
                 NAME_INVALID: 'Name must contain at least 2 characters and letters only.',
                 EMAIL_REQUIRED: 'Please enter your email address.',
                 EMAIL_INVALID: 'Please enter a valid email address.',
                 MESSAGE_REQUIRED: 'Please enter a message.',
+                MESSAGE_MIN_REMAINING: 'Please enter {count} more characters.',
                 MESSAGE_INVALID: 'Message must contain at least 10 characters.',
                 GENERIC_INVALID: 'Please check this field.'
             },
             FOOTER: {
                 LEGAL_NOTICE: 'Legal Notice'
-            }
-
-            ,
+            },
             POLICY: {
                 TITLE: 'Legal Notice',
                 SECTIONS: {

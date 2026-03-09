@@ -8,8 +8,7 @@
             name="name"
             #name="ngModel"
             required
-            minlength="2"
-            pattern="[a-zA-ZäöüÄÖÜß\s\-']+"
+            pattern="^(?=(?:.*[a-zA-ZäöüÄÖÜß]){2,})[a-zA-ZäöüÄÖÜß\s\-']+$"
             type="text"
             placeholder="{{ translation.translate('CONTACTME.NAMEPLACEHOLDER') }}">
             <div class="validation-bubble" *ngIf="showValidationBubble(name)">
@@ -41,7 +40,7 @@
             name="message"
             #message="ngModel"
             required
-            minlength="10"
+            pattern="^(?=(?:.*\S){10,}).+$"
             type="text"
             placeholder="{{ translation.translate('CONTACTME.HELPPLACEHOLDER') }}">
             <div class="validation-bubble" *ngIf="showValidationBubble(message)">

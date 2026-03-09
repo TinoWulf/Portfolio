@@ -2,19 +2,19 @@
 
   .layer-right {
     display: flex;
-    z-index: 50;
+    z-index: 5;
     pointer-events: auto;
     right: 15% !important;
-    bottom: -170px;
+    bottom: -220px;
     top: auto;
   }
 
   .layer-left {
     display: flex;
-    z-index: 50;
+    z-index: 5;
     pointer-events: auto;
     left: 15% !important;
-    bottom: 0;
+    bottom: -56px;
     top: auto;
   }
 }
@@ -35,19 +35,23 @@
 
   .layer-right {
     right: 5% !important;
+    bottom: -250px;
   }
 
   .layer-left {
     left: 5% !important;
+    bottom: -72px;
   }
 }
 
 @media (max-width: 376px) {
   .layer-right {
     right: 0 !important;
+    bottom: -276px;
   }
 
   .layer-left {
     left: 0 !important;
+    bottom: -88px;
   }
 }
