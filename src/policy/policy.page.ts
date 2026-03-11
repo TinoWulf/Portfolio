@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 import { TranslationService } from '../app/services/translation.services';
 
 @Component({
@@ -8,8 +9,15 @@ import { TranslationService } from '../app/services/translation.services';
   templateUrl: './policy.page.html',
   styleUrl: './policy.page.scss'
 })
-export class PolicyPage {
-  constructor(public translation: TranslationService) {}
+export class PolicyPage implements OnInit {
+  constructor(
+    public translation: TranslationService,
+    private readonly viewportScroller: ViewportScroller
+  ) {}
+
+  ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 
   t(path: string) {
     return this.translation.translate(path);

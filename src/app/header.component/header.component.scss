@@ -28,14 +28,17 @@
 
             .nav-links {
                 display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 height: 26px;
-                width: 100%;
+                width: auto;
                 opacity: 1;
-                gap: 24px;
+                column-gap: 24px;
 
                 a {
-                    width: 92px;
                     height: 26px;
+                    display: inline-flex;
+                    align-items: center;
                     opacity: 1;
                     // animation-timing-function: ease-out;
                     // animation-duration: 300ms;
