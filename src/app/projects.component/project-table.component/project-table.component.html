@@ -1,7 +1,7 @@
 <div class="body">
   <div class="projects-wrapper" (mouseleave)="activeProject = null">
 
-    <div class="projects-table border-style">
+    <div data-scroll-reveal class="projects-table border-style scroll-reveal-left" style="--reveal-delay: 140ms;">
       <div class="single-project" *ngFor="let project of projects; let i = index" (click)="openOverlay(i)"
         (mouseenter)="activeProject = project.id"
         [ngClass]="{ 'border-style': i === middleIndex }">
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="project-preview">
+    <div data-scroll-reveal class="project-preview scroll-reveal-right" style="--reveal-delay: 220ms;">
       <img *ngFor="let project of projects" [src]="project.image" [class.visible]="activeProject === project.id" />
     </div>
 

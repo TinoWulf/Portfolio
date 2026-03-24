@@ -4,12 +4,12 @@ import { ViewportScroller, isPlatformBrowser } from '@angular/common';
 import { TranslationService } from '../app/services/translation.services';
 
 @Component({
-  selector: 'app-policy',
+  selector: 'app-imprint',
   imports: [RouterModule],
-  templateUrl: './policy.page.html',
-  styleUrl: './policy.page.scss'
+  templateUrl: './imprint.page.html',
+  styleUrl: './imprint.page.scss'
 })
-export class PolicyPage implements OnInit, AfterViewInit, OnDestroy {
+export class ImprintPage implements OnInit, AfterViewInit, OnDestroy {
   private readonly scrollTimeouts: number[] = [];
 
   constructor(

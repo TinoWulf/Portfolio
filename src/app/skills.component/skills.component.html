@@ -1,10 +1,10 @@
 <div id="skill" class="body">
-  <div class="skill-set">
+  <div data-scroll-reveal class="skill-set scroll-reveal-left">
     <p>{{ translation.translate('SKILLS.TEC') }}</p>
     <app-skill-box></app-skill-box>
   </div>
 
-  <div class="skill-icons">
+  <div data-scroll-reveal class="skill-icons scroll-reveal-right" style="--reveal-delay: 100ms;">
     <div *ngFor="let skill of skills">
       <img
         [id]="skill.src" 

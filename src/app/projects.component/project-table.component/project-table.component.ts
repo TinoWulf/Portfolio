@@ -5,6 +5,7 @@ import { TranslationService } from '../../services/translation.services';
 
 @Component({
   selector: 'app-project-table',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './project-table.component.html',
   styleUrls: ['./project-table.component.scss', './project-table.component.mediaquarry.scss'],

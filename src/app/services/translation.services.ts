@@ -88,65 +88,74 @@ export class TranslationService {
             FOOTER: {
                 LEGAL_NOTICE: 'Impressum'
             },
-            POLICY: {
+            IMPRINT: {
                 TITLE: 'Impressum',
-                INTRO: 'Diese Datenschutzerklärung erklärt, wie ich personenbezogene Daten sammle und verwende.',
-                LAST_UPDATED: 'Zuletzt aktualisiert:',
                 SECTIONS: {
                     IMPRINT: {
-                        TITLE: 'Impressum',
+                        TITLE: 'Angaben gemäß § 5 TMG',
                         CONTENT1: 'Tino Willy Wulf',
                         CONTENT2: 'Wiggersstraße 9',
                         CONTENT3: '18057 Rostock',
                         CONTENT4: 'Deutschland'
                     },
-                    EXPLORING: {
+                    CONTACT: {
                         TITLE: 'Kontakt',
-                        CONTENT: 'wulf.tino.gz@gmail.com'
+                        CONTENT: 'E-Mail: wulf.tino.gz@gmail.com'
                     },
-                    ACCEPTANCE: {
-                        TITLE: 'Akzeptanz der Bedingungen',
-                        CONTENT: 'Durch den Zugriff auf und die Nutzung von Portfolio erkennst du die folgenden Bedingungen sowie etwaige Richtlinien, Hinweise oder spätere Änderungen an. Wir können diese Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.'
+                    RESPONSIBLE: {
+                        TITLE: 'Verantwortlich für den Inhalt',
+                        CONTENT: 'Tino Willy Wulf, Anschrift wie oben.'
                     },
-                    SCOPE: {
-                        TITLE: 'Geltungsbereich und Eigentum am Produkt',
-                        CONTENT: 'Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH erstellt. Es dient Ausbildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher kann keine dauerhafte Verfügbarkeit, Zuverlässigkeit oder Fehlerfreiheit garantiert werden. Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Jede unbefugte Nutzung, Vervielfältigung, Änderung oder Verbreitung des Designs ist untersagt.'
-                    },
-                    PROPRIETARY: {
-                        TITLE: 'Eigentumsrechte',
-                        CONTENT: 'Abgesehen vom Design der Developer Akademie GmbH behalten wir alle Rechte an Portfolio, einschließlich urheberrechtlich geschützter Inhalte, Marken und sonstiger proprietärer Informationen.'
-                    },
-                    USE: {
-                        TITLE: 'Nutzung des Produkts',
-                        CONTENT: 'Portfolio darf ausschließlich für rechtmäßige Zwecke und im Einklang mit den geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung für rechtswidrige Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist untersagt. Für Interaktionen mit anderen Nutzern bist du selbst verantwortlich.'
-                    },
-                    DISCLAIMER: {
-                        TITLE: 'Haftungsausschluss und Haftungsbeschränkung',
-                        CONTENT: 'Portfolio wird ohne Gewähr bereitgestellt, ausdrücklich oder stillschweigend, einschließlich aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten. In keinem Fall haften wir oder die Developer Akademie für direkte, indirekte, zufällige, besondere oder Folgeschäden, einschließlich entgangenen Gewinns, Goodwill-Verlust, Nutzungs- oder Datenverlust, auch wenn auf die Möglichkeit solcher Schäden hingewiesen wurde.'
-                    },
-                    INDEMNITY: {
-                        TITLE: 'Freistellung',
-                        CONTENT: 'Du erklärst dich damit einverstanden, uns, die Developer Akademie sowie verbundene Partner, Organe, Vertreter und Mitarbeitende von allen Ansprüchen, Forderungen, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, die aus deiner Nutzung von Portfolio oder einem Verstoß gegen dieses Impressum entstehen.'
-                    },
-                    COLLECTION: {
-                        TITLE: 'Welche Daten werden gesammelt?',
-                        CONTENT: 'Kontaktinformationen, freiwillige Angaben aus Formularen und technische Metadaten.'
-                    },
-                    USAGE: {
-                        TITLE: 'Wofür werden Daten verwendet?',
-                        CONTENT: 'Antworten auf Anfragen, Verbesserung der Website und rechtliche Zwecke.'
-                    },
-                    COOKIES: {
-                        TITLE: 'Cookies',
-                        CONTENT: 'Die Seite verwendet Cookies zur Verbesserung der Nutzererfahrung.'
-                    },
-                    RIGHTS: {
-                        TITLE: 'Ihre Rechte',
-                        CONTENT: 'Sie können Zugang, Berichtigung oder Löschung Ihrer Daten verlangen.'
+                    DISPUTE: {
+                        TITLE: 'EU-Streitschlichtung',
+                        CONTENT: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: https://ec.europa.eu/consumers/odr/. Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.'
                     }
                 },
                 CONTACT: 'Bei Fragen kontaktieren Sie mich bitte unter: wulf.tino.gz@gmail.com',
-                DATE: 'Datum: 11.02.2026',
+                DATE: 'Stand: 24.03.2026',
+                BTN_BACK_HOME: 'Zur Startseite'
+            },
+            POLICY: {
+                TITLE: 'Datenschutzerklärung',
+                INTRO: 'Diese Datenschutzerklärung erklärt, wie ich personenbezogene Daten bei der Nutzung dieser Website verarbeite.',
+                SECTIONS: {
+                    CONTROLLER: {
+                        TITLE: 'Verantwortliche Stelle',
+                        CONTENT: 'Verantwortlich für die Datenverarbeitung auf dieser Website ist: Tino Willy Wulf, Wiggersstraße 9, 18057 Rostock, Deutschland, E-Mail: wulf.tino.gz@gmail.com.'
+                    },
+                    COLLECTION: {
+                        TITLE: 'Welche Daten werden erfasst?',
+                        CONTENT: 'Beim Besuch dieser Website werden technisch notwendige Verbindungsdaten verarbeitet, z. B. Browsertyp, Uhrzeit und gekürzte IP-Adresse. Bei einer Kontaktaufnahme werden zusätzlich die von Ihnen eingegebenen Angaben wie Name, E-Mail-Adresse und Nachricht verarbeitet.'
+                    },
+                    USAGE: {
+                        TITLE: 'Zwecke der Verarbeitung',
+                        CONTENT: 'Die Datenverarbeitung erfolgt zur Bereitstellung und sicheren Auslieferung der Website, zur Bearbeitung von Kontaktanfragen sowie zur technischen Fehleranalyse und Verbesserung des Angebots.'
+                    },
+                    LEGAL_BASIS: {
+                        TITLE: 'Rechtsgrundlagen',
+                        CONTENT: 'Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Kommunikation), Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Webauftritt) sowie ggf. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).'
+                    },
+                    RETENTION: {
+                        TITLE: 'Speicherdauer',
+                        CONTENT: 'Personenbezogene Daten werden nur so lange gespeichert, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Danach werden sie gelöscht.'
+                    },
+                    COOKIES: {
+                        TITLE: 'Cookies',
+                        CONTENT: 'Diese Website verwendet nur technisch notwendige Cookies, sofern erforderlich. Es findet kein Tracking zu Werbezwecken statt.'
+                    },
+                    RIGHTS: {
+                        TITLE: 'Ihre Rechte',
+                        CONTENT: 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung. Zudem besteht ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde.'
+                    },
+                    SECURITY: {
+                        TITLE: 'Sicherheit',
+                        CONTENT: 'Es werden angemessene technische und organisatorische Maßnahmen getroffen, um Ihre Daten vor Verlust, Missbrauch oder unbefugtem Zugriff zu schützen.'
+                    }
+                },
+                CONTACT: 'Bei Fragen zum Datenschutz kontaktieren Sie mich bitte unter: wulf.tino.gz@gmail.com',
+                DATE: 'Stand: 24.03.2026',
+                BTN_READ_POLICY: 'Ich habe die Datenschutzerklärung gelesen',
+                BTN_BACK_HOME: 'Zur Startseite',
                 BACK_BTN: 'Zurück',
                 ACCEPT_BTN: 'Akzeptieren',
                 DECLINE_BTN: 'Ablehnen'
@@ -230,47 +239,77 @@ export class TranslationService {
             FOOTER: {
                 LEGAL_NOTICE: 'Legal Notice'
             },
-            POLICY: {
+            IMPRINT: {
                 TITLE: 'Legal Notice',
                 SECTIONS: {
                     IMPRINT: {
-                        TITLE: 'Imprint',
+                        TITLE: 'Information according to Section 5 TMG',
                         CONTENT1: 'Tino Willy Wulf',
-                        CONTENT2: 'Wiggersstraße 9',
+                        CONTENT2: 'Wiggersstrasse 9',
                         CONTENT3: '18057 Rostock',
                         CONTENT4: 'Germany'
                     },
-                    EXPLORING: {
-                        TITLE: 'Exploring the Board',
-                        CONTENT: 'wulf.tino.gz@gmail.com'
+                    CONTACT: {
+                        TITLE: 'Contact',
+                        CONTENT: 'Email: wulf.tino.gz@gmail.com'
                     },
-                    ACCEPTANCE: {
-                        TITLE: 'Acceptance of terms',
-                        CONTENT: 'By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.'
+                    RESPONSIBLE: {
+                        TITLE: 'Responsible for content',
+                        CONTENT: 'Tino Willy Wulf, address as stated above.'
                     },
-                    SCOPE: {
-                        TITLE: 'Scope and ownership of the product',
-                        CONTENT: 'Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.'
+                    DISPUTE: {
+                        TITLE: 'EU dispute resolution',
+                        CONTENT: 'The European Commission provides a platform for online dispute resolution: https://ec.europa.eu/consumers/odr/. I am not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.'
+                    }
+                },
+                CONTACT: 'For legal inquiries, please contact me at wulf.tino.gz@gmail.com',
+                DATE: 'Status: 24.03.2026',
+                BTN_BACK_HOME: 'Back to home'
+            },
+            POLICY: {
+                TITLE: 'Privacy Policy',
+                INTRO: 'This privacy policy explains how personal data is processed when visiting this website and when contacting me.',
+                SECTIONS: {
+                    CONTROLLER: {
+                        TITLE: 'Controller',
+                        CONTENT: 'The controller responsible for data processing on this website is: Tino Willy Wulf, Wiggersstrasse 9, 18057 Rostock, Germany, email: wulf.tino.gz@gmail.com.'
                     },
-                    PROPRIETARY: {
-                        TITLE: 'Proprietary rights',
-                        CONTENT: 'Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.'
+                    COLLECTION: {
+                        TITLE: 'Which data is collected?',
+                        CONTENT: 'When you visit this website, technically required connection data may be processed (for example browser type, timestamp, and shortened IP address). When you contact me, the information you provide such as name, email address, and message is processed.'
                     },
-                    USE: {
-                        TITLE: 'Use of the product',
-                        CONTENT: 'Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.'
+                    USAGE: {
+                        TITLE: 'Purpose of processing',
+                        CONTENT: 'Data is processed to provide a secure and stable website, to respond to contact requests, and to analyze technical errors and improve the service.'
                     },
-                    DISCLAIMER: {
-                        TITLE: 'Disclaimer of warranties and limitation of liability',
-                        CONTENT: 'Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.'
+                    LEGAL_BASIS: {
+                        TITLE: 'Legal basis',
+                        CONTENT: 'Processing is based on Art. 6(1)(b) GDPR (pre-contractual communication), Art. 6(1)(f) GDPR (legitimate interest in website security and functionality), and where applicable Art. 6(1)(a) GDPR (consent).'
                     },
-                    INDEMNITY: {
-                        TITLE: 'Indemnity',
-                        CONTENT: 'You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.'
+                    RETENTION: {
+                        TITLE: 'Data retention',
+                        CONTENT: 'Personal data is stored only for as long as necessary for the stated purposes or as required by legal retention obligations. Data is deleted afterwards.'
+                    },
+                    COOKIES: {
+                        TITLE: 'Cookies',
+                        CONTENT: 'This website only uses technically necessary cookies if required. No advertising or tracking cookies are used.'
+                    },
+                    RIGHTS: {
+                        TITLE: 'Your rights',
+                        CONTENT: 'You have the right to access, rectify, erase, restrict processing, data portability, and object to processing. You also have the right to lodge a complaint with a supervisory authority.'
+                    },
+                    SECURITY: {
+                        TITLE: 'Security',
+                        CONTENT: 'Appropriate technical and organizational measures are implemented to protect your data against loss, misuse, and unauthorized access.'
                     },
                 },
-                CONTACT: 'For any questions or notices, please contact us at wulf.tino.gz@gmail.com',
-                DATE: 'Date: 11.02.2026'
+                CONTACT: 'For privacy-related inquiries, please contact me at wulf.tino.gz@gmail.com',
+                DATE: 'Status: 24.03.2026',
+                BTN_READ_POLICY: 'I have read the privacy policy',
+                BTN_BACK_HOME: 'Back to home',
+                BACK_BTN: 'Back',
+                ACCEPT_BTN: 'Accept',
+                DECLINE_BTN: 'Decline'
             }
         }
     };

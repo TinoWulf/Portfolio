@@ -57,7 +57,7 @@
                         <span class="box"></span>
                     </label>
                     <p>{{ translation.translate('CONTACTME.POLICY1') }}</p>
-                    <a class="privacy-policy-link hover-underline" routerLink="/policy">{{ translation.translate('CONTACTME.POLICY2') }}</a>
+                    <a class="privacy-policy-link hover-underline" [routerLink]="['/policy']">{{ translation.translate('CONTACTME.POLICY2') }}</a>
                     <p>{{ translation.translate('CONTACTME.POLICY3') }}</p>
                 </div>
                 <p class="report" [class.active]="triedSubmit && !isChecked">

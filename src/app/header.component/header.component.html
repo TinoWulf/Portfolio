@@ -6,9 +6,9 @@
                 <div class="lang-option" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</div>
             </div>
             <div class="nav-links desktop-only">
-                <a class="hover-underline" href="#about">{{ translation.translate('HEADER.ABOUTME') }}</a>
-                <a class="hover-underline" href="#skill">{{ translation.translate('HEADER.SKILLS') }}</a>
-                <a class="hover-underline" href="#projects">{{ translation.translate('HEADER.PROJECTS') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="about">{{ translation.translate('HEADER.ABOUTME') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="skill">{{ translation.translate('HEADER.SKILLS') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="projects">{{ translation.translate('HEADER.PROJECTS') }}</a>
             </div>
             <button class="mobile-menu-button mobile-only" aria-label="Open menu" (click)="toggleMobileMenu()">
                 <img src="assets/img/icons/menu icon.png" alt="menu" />
@@ -22,9 +22,9 @@
     <div class="mobile-menu mobile-only" [class.open]="mobileMenuOpen">
         <div class="mobile-menu-inner">
             <nav class="mobile-nav">
-                <a class="hover-underline" href="#about" (click)="closeMobileMenu()">{{ translation.translate('HEADER.ABOUTME') }}</a>
-                <a class="hover-underline" href="#skill" (click)="closeMobileMenu()">{{ translation.translate('HEADER.SKILLS') }}</a>
-                <a class="hover-underline" href="#projects" (click)="closeMobileMenu()">{{ translation.translate('HEADER.PROJECTS') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="about" (click)="closeMobileMenu()">{{ translation.translate('HEADER.ABOUTME') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="skill" (click)="closeMobileMenu()">{{ translation.translate('HEADER.SKILLS') }}</a>
+                <a class="hover-underline" [routerLink]="['/']" fragment="projects" (click)="closeMobileMenu()">{{ translation.translate('HEADER.PROJECTS') }}</a>
             </nav>
             <div class="language-switch">
                 <div class="lang-option" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</div>

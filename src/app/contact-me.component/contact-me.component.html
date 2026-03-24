@@ -1,5 +1,5 @@
 <div id="contact-me" class="body">
-    <div class="text-box">
+    <div data-scroll-reveal class="text-box scroll-reveal-left">
         <div>
             <p>{{ translation.translate('CONTACTME.CONTACTME') }}</p>
             <p class="headline">{{ translation.translate('CONTACTME.HEADLINE') }}</p>
@@ -13,5 +13,5 @@
             </div>
         </div>
     </div>
-    <app-contact-sheet></app-contact-sheet>
+    <app-contact-sheet data-scroll-reveal class="scroll-reveal-up" style="--reveal-delay: 140ms;"></app-contact-sheet>
 </div>

@@ -5,7 +5,7 @@
     z-index: 5;
     pointer-events: auto;
     right: 15% !important;
-    bottom: -220px;
+    bottom: -200px;
     top: auto;
   }
 
@@ -29,13 +29,26 @@
     }
   }
 
+  .layer-right {
+    bottom: -120px;
+  }
+
+  .layer-left {
+    bottom: 0px;
+    height: 312px;
+  }
+
+  .vector {
+    height: 300px;
+  }
+
 }
 
 @media (max-width: 576px) {
 
   .layer-right {
     right: 5% !important;
-    bottom: -250px;
+    bottom: -200px;
   }
 
   .layer-left {
@@ -47,7 +60,7 @@
 @media (max-width: 376px) {
   .layer-right {
     right: 0 !important;
-    bottom: -276px;
+    bottom: -200px;
   }
 
   .layer-left {

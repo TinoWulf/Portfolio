@@ -5,6 +5,7 @@ import { TranslationService } from '../services/translation.services';
 
 @Component({
   selector: 'app-about-me',
+  standalone: true,
   imports: [ShortProfile],
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss', './about-me.component.mediaquarry.scss'],

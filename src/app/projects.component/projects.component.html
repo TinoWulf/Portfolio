@@ -1,8 +1,8 @@
 <div id="projects" class="featured-projects">
-    <div class="headline-div">
+    <div data-scroll-reveal class="headline-div scroll-reveal-left">
         <p class="portfolio">Portfolio</p>
         <p class="headline">{{ translation.translate('PROJECTS.HEADLINE') }}</p>
     </div>
-    <p class="explanation">{{ translation.translate('PROJECTS.INTRODUCTION') }}</p>
+    <p data-scroll-reveal class="explanation scroll-reveal-left" style="--reveal-delay: 90ms;">{{ translation.translate('PROJECTS.INTRODUCTION') }}</p>
     <app-project-table></app-project-table>
 </div>

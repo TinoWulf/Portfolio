@@ -5,6 +5,7 @@ import { TranslationService } from '../services/translation.services';
 
 @Component({
   selector: 'app-contact-me',
+  standalone: true,
   imports: [ContactSheet],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss', './contact-me.component.mediaquarry.scss'],
